@@ -1,10 +1,10 @@
 # Challenge 1: Multiples of a Number
 num = int(input("Enter a number: ")) #asked by the user number
-len = int(input("Enter the lenght: ")) # asked by the user length
+length = int(input("Enter the lenght: ")) # asked by the user length
 # Create a list of multiples of the number up to the specified length
 new_list = [] # Initialize an empty list to store the multiples
 mult = 1 # Initialize a multiplier variable
-while mult<= len: # Loop until the multiplier exceeds the specified length
+while mult<= length: # Loop until the multiplier exceeds the specified length
     new_list.append(num * mult) # Append the current multiple to the list
     mult += 1 # Increment the multiplier for the next iteration
 else:
