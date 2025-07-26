@@ -1,0 +1,60 @@
+W1D3
+DATA STRUCTURES
+
+List: a sequence of ordered elements that can be changed (mutable)
+Tuple: a sequence of ordered elements that are immutable (can't be changed)
+Set: a sequence of unordered elements that are not duplicated is mutable(can be changed)
+
+most used List methods:
+index()
+append()
+insert()
+sort()
+sorted()
+pop()
+remove()
+extend()
+sum()
+min()
+max()
+
+
+Tuple methods:
+index()
+count()
+sum()
+min()
+max()
+
+Set methods
+union()
+intersection()
+difference()
+
+LOOPS
+FOR LOOP
+Syntax of a for loop
+
+for <variable> in <sequence>:
+     indented block of code that will happen in each iteration
+
+possible sequences that can be used in a for loop:
+strings
+lists
+tuples
+sets
+range
+
+important build in function used in for loops:
+range(start, stop, step)
+enumerate()
+
+
+WHILE LOOP: execute a block of code until a certain condition is True
+Syntax:
+
+While <condition>:
+    indented block of code to be executed until the condition is False or until there is "break" keyword
+
+
+
