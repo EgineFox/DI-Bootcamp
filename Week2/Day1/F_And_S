@@ -1,0 +1,14 @@
+# Ex1
+students = ['Harry','Draco','Ron','Luna']
+# def welcome():
+#     for  name in students:
+#         print(f'{name}, welcome to Hogwarts!')
+
+# welcome()
+
+def get_house(students):
+    for i,name in enumerate(students):
+        students[i] = f'{name} - Griffindor'
+    
+get_house(students)
+print(students)
