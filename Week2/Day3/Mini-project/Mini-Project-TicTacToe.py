@@ -1,3 +1,4 @@
+from builtins import KeyboardInterrupt
 from tabulate import tabulate
 def game_step(current_player):
     '''Doing step'''
@@ -21,7 +22,7 @@ def game_step(current_player):
                 print("Клетка занята, попробуйте снова.")
         except KeyboardInterrupt:
             print("\nВы вышли из игры досрочно.")
-            break  # <-- заменили exit() на break
+            raise  # <-- Передаём исключение дальше!
         except (IndexError, ValueError):
             print("Некорректный ввод. Попробуйте снова.")
 game_board = [
@@ -57,7 +58,7 @@ def game_step(current_player):
                 print("Клетка занята, попробуйте снова.")
         except KeyboardInterrupt:
             print("\nВы вышли из игры досрочно.")
-            exit()
+            raise  # <-- Передаём исключение дальше!
         except (IndexError, ValueError):
             print("Некорректный ввод. Попробуйте снова.")
 
@@ -78,33 +79,38 @@ def check_win():
     return False
 
 def start_game():
+    print("Welcome to Tic Tac Toe game!")
     while True:
-        # Clear game board
+        # Сброс игрового поля
         global game_board
         game_board = [
-    [1,'', '', ''],
-    [2,'', '', ''],
-    [3,'', '', '']
-    ]
+            [1,'', '', ''],
+            [2,'', '', ''],
+            [3,'', '', '']
+        ]
         current_player = "X"
         steps = 0
-        while True:
-            draw_board()
-            game_step(current_player)
-            steps += 1
-            if check_win():
-               draw_board()
-               print(f"Игрок {current_player} победил!")
-               break
-            if steps == 9:
-               draw_board()
-               print("Ничья!")
-               break
-            current_player = "O" if current_player == "X" else "X"
+        try:
+            while True:
+                draw_board()
+                game_step(current_player)
+                steps += 1
+                if check_win():
+                    draw_board()
+                    print(f"Игрок {current_player} победил!")
+                    break
+                if steps == 9:
+                    draw_board()
+                    print("Ничья!")
+                    break
+                current_player = "O" if current_player == "X" else "X"
+        except KeyboardInterrupt:
+            print("\nВы вышли из игры досрочно.")
+        # ВОПРОС О НОВОЙ ИГРЕ ВСЕГДА ЗДЕСЬ
         again = input("Хотите сыграть ещё раз? (y/n): ").strip().lower()
         if again != "y":
             print("Спасибо за игру!")
             break
 
-print("Welcome to Tic Tac Toe game!")
+
 start_game()
