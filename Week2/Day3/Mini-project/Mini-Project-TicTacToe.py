@@ -9,7 +9,7 @@ def game_step(current_player):
                 print("Некорректный ввод. Попробуйте снова.")
                 continue
             if user_input[0].lower() == 'q':
-                raise KeyboardInterrupt
+                raise KeyboardInterrupt  # Просто пробрасываем исключение, не выводим сообщение здесь
             row = int(user_input[0]) - 1
             col = ord(user_input[1].upper()) - ord('A') + 1
             if row not in range(3) or col not in range(1, 4):
@@ -21,10 +21,10 @@ def game_step(current_player):
             else:
                 print("Клетка занята, попробуйте снова.")
         except KeyboardInterrupt:
-            print("\nВы вышли из игры досрочно.")
-            raise  # <-- Передаём исключение дальше!
+            raise  # Только пробрасываем исключение дальше
         except (IndexError, ValueError):
             print("Некорректный ввод. Попробуйте снова.")
+
 game_board = [
     [1,'', '', ''],
     [2,'', '', ''],
@@ -45,7 +45,7 @@ def game_step(current_player):
                 print("Некорректный ввод. Попробуйте снова.")
                 continue
             if user_input[0].lower() == 'q':
-                raise KeyboardInterrupt  # Используем исключение для выхода из всех циклов
+                raise KeyboardInterrupt  # Просто пробрасываем исключение, не выводим сообщение здесь
             row = int(user_input[0]) - 1
             col = ord(user_input[1].upper()) - ord('A') + 1
             if row not in range(3) or col not in range(1, 4):
@@ -57,8 +57,7 @@ def game_step(current_player):
             else:
                 print("Клетка занята, попробуйте снова.")
         except KeyboardInterrupt:
-            print("\nВы вышли из игры досрочно.")
-            raise  # <-- Передаём исключение дальше!
+            raise  # Только пробрасываем исключение дальше
         except (IndexError, ValueError):
             print("Некорректный ввод. Попробуйте снова.")
 
