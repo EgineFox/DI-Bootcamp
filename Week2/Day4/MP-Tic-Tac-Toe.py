@@ -1,10 +1,12 @@
 def display_board(board):
     print("\n")
-    print(f" {board[0]} | {board[1]} | {board[2]} ")
-    print("---|---|---")
-    print(f" {board[3]} | {board[4]} | {board[5]} ")
-    print("---|---|---")
-    print(f" {board[6]} | {board[7]} | {board[8]} ")
+    print("*************")
+    print(f"* {board[0]} | {board[1]} | {board[2]} *")
+    print("*---|---|---*")
+    print(f"* {board[3]} | {board[4]} | {board[5]} *")
+    print("*---|---|---*")
+    print(f"* {board[6]} | {board[7]} | {board[8]} *")
+    print("*************")
     print("\n")
 
 def player_input(player, board):
@@ -34,7 +36,8 @@ def play():
     current_player = 1
 
     display_board(board)
-
+    print("Player X's tyrn...\n")
+    
     while True:
         mark = 'X' if current_player == 1 else 'O'
         position = player_input(current_player, board)
