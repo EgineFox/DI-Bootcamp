@@ -65,8 +65,8 @@ elif davids_dog < sarahs_dog:
 else:
     print(f"{davids_dog.name} and {sarahs_dog.name} are the same size")
 
-Exercise 3 : Who’s the song producer?
-Create a Song class to represent song lyrics and print them.
+# Exercise 3 : Who’s the song producer?
+# Create a Song class to represent song lyrics and print them.
 
 class Song:
     '''Initialization Class Song'''
