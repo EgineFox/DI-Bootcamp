@@ -1,0 +1,12 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP.py
+suggestions for improvement:
+- In Exercise 1, the `Pets` class is defined twice. Remove the redundant definition.
+- In Exercise 2, the `bark()` method in the `Dog` class prints the barking sound instead of returning it as a string.  It should return a string as per the instructions.
+- Improve the naming of variables and classes for better readability. For example, more descriptive names for variables and functions would improve the code readability.
+- Add docstrings to functions and classes to explain their purpose, parameters, and return values, enhancing readability and understandability.
+Brief justification:
+- correctness: The code correctly implements inheritance (Exercises 1 and 3), polymorphism (Exercise 1), and the use of the `super()` function (Exercise 3).  It also correctly implements class methods and attributes (Exercises 1, 2, and 4) and exception handling (although none were explicitly required, the code handles the case of a person not found in Exercise 4). However, there are minor issues (detailed in feedback) that prevent a perfect score. The core functionality related to the chapter topics is implemented correctly.
+- readability: The code is mostly readable, but some improvements could enhance clarity (see feedback).  Consistent indentation and more descriptive variable names would greatly improve readability.
+- performance: The performance of the code is excellent; no significant inefficiencies are present. The algorithms are straightforward and efficient for the tasks.
+- security: The code does not present any security vulnerabilities.  It deals with simple data structures and functions, so there are no security concerns.
+
