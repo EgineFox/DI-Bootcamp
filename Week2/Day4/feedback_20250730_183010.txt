@@ -1,0 +1,11 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week2/Day4/Daily-challenge-Challenges.py
+suggestions for improvement:
+- In Challenge 1, the use of list comprehension is excellent and aligns perfectly with Python best practices.  However, the prompt specifically requests that the final output be a simple comma-separated string (no spaces after commas). The current code inserts spaces after each comma.
+- In Challenge 2, the function `compare_leng` is well-structured and efficient. The docstring is a good addition. The variable names could be more descriptive (e.g., `longest_word` is fine, but `max_length` could be `max_word_length`).
+- Both functions could benefit from more robust input validation (e.g., handling empty input strings).
+Brief justification:
+- correctness: Both challenges are addressed correctly, with the code producing the expected outputs as described in the problem statements. The solutions effectively utilize the Python concepts of string manipulation, list sorting, and functions, all of which are explicitly mentioned in the chapter content. The minor imperfection in Challenge 1 (the extra spaces) is a stylistic point, not a fundamental failure to meet the problem's requirements.
+- readability: The code is generally easy to read and understand.  The use of descriptive variable names in Challenge 2 helps. However,  Challenge 1 could be improved by adding more comments to explain the individual steps.  Challenge 2's variable names could be slightly more explicit for better readability. 
+- performance: The algorithms used are efficient for the given tasks.  The time complexity of sorting in Challenge 1 is O(n log n), which is efficient for most practical input sizes. The single-pass iteration in Challenge 2 has a time complexity of O(n), making it very efficient. The space complexity is also relatively low in both cases.
+- security: There are no obvious security vulnerabilities. The code only deals with user input and performs basic string operations, posing no security risks.
+
