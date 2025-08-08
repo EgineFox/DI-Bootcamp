@@ -5,7 +5,7 @@ class Circle:
     def __init__(self, radius=None, diameter=None):
         """
         Initialize a Circle instance.
-        You can specify either the radius or the diameter.
+        can specify either the radius or the diameter.
         """
 
         if radius is not None:
