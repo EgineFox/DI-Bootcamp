@@ -1,0 +1,13 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week3/Day6/Daily-challenge-Text-Analysis.py
+suggestions for improvement:
+- In `most_common_word`, consider using `collections.Counter` for more efficient word counting.  The current implementation has a time complexity of O(n*m) where n is the number of words and m is the length of the unique words list.  `Counter` provides a more optimized solution.
+- Improve error handling in `word_frequency` and other methods. Currently, it only handles the case where a word is not found. Consider adding handling for empty input, invalid file paths, etc.
+- The `remove_stop_words` method uses a hardcoded list of stop words.  A more robust solution would be to load stop words from a file or a more comprehensive list (e.g., NLTK's stopword list).
+- Add comprehensive docstrings to all methods, specifying the purpose, arguments, return values, and any potential exceptions.
+- Add input validation to prevent unexpected behavior (e.g., check for empty strings or file paths in appropriate methods).
+Brief justification:
+- correctness: The code correctly implements the `Text` class with methods for word frequency, most common word, and unique words. It also correctly implements the `TextModification` class, inheriting from `Text`, with methods for removing punctuation, stop words, and special characters.  The `from_file` class method successfully reads and processes text from a file.  There are minor improvements needed as noted in feedback. The functionality directly addresses the requirements in the chapter content.
+- readability: The code is generally readable, but docstrings are missing or insufficient.  Variable names could be more descriptive in some places. The organization of methods and classes is good.  Adding docstrings and clearer variable names would significantly improve readability.
+- performance: The performance of `most_common_word` could be significantly improved using `collections.Counter`.  The current implementation may be less efficient for very large texts. Other methods have reasonable performance for typical use cases.
+- security: The code doesn't have any obvious security vulnerabilities.  The file handling is done with `with open(...)`, ensuring that the file is closed properly, which prevents resource leaks.
+
