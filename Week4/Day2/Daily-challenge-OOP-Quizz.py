@@ -31,16 +31,16 @@ class Card:
     def show(self):
         print(f"{self.value} of {self.suit}")
 
-class Desk:
+class Deck:
     def __init__(self):
-        self.cards = [] #an empty list for a desk of 54 cards
+        self.cards = [] #an empty list for a deсk of 54 cards
         self.shuffle()
 
     def shuffle(self):
         '''makes sure the deck of cards has all 52 cards and then rearranges them randomly.'''
         for suit in ['Hearts', 'Diamonds', 'Clubs', 'Spades']:
             for value in ['2','3','4','5','6','7','8','9','10','J','Q','K','A']:
-                self.cards.append(Card(suit, value))
+                self.cards.append(Card(suit, value)) # creation of an object (instance) of a card with a given suit and value.
         for i in range(len(self.cards) - 1, 0, -1):
             r = random.randint(0, i)
             self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
@@ -57,9 +57,9 @@ class Desk:
     
 
 
-desk = Desk()
+desk = Deck()
 desk.shuffle() # test shuffle() 
-# card = desk.deal()
+# card = deck.deal()
 desk.show()
 # card.show()
 
