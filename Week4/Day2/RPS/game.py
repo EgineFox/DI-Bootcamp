@@ -1,43 +1,48 @@
-import random
+import random  # Import the random module to let the computer make random choices
 
 class Game:
+    # Ask the user to choose rock, paper, scissors, or quit
     def get_user_item(self):
         while True:
-            self.user_item = input(f'Please enter "r" / "p" / "s" (rock/paper/scissors) for play or "q" for quit')
-            if self.user_item in ('r', 'p', 's'):
-                print(f'You chose: {self.user_item}')
-            elif self.user_item == 'q':
+            user_item = input('Please enter "r" / "p" / "s" (rock/paper/scissors) for play or "q" for quit \n')
+            if user_item in ('r', 'p', 's'):
+                print(f'You chose: {user_item}')
+                return user_item  # Return the user's choice
+            elif user_item == 'q':
                 print('Goodbye!')
-                break
+                return None  # Return None to signal quitting the game
             else:
-                print('Invalid input. Please enter "r", "p", "s" or "q".')
+                print('Invalid input. Please enter "r", "p", "s" or "q".\n')  # Ask again if input is invalid
 
-
-
+    # Let the computer randomly choose rock, paper, or scissors
     def get_computer_item(self):
-        computer_item = random.choice(['r', 'p', 's'])
+        computer_item = random.choice(['r', 'p', 's'])  # Randomly pick one option
         print(f'Computer chose: {computer_item}')
-        return computer_item
+        return computer_item  # Return the computer's choice
 
-
+    # Decide who wins based on the rules of rock-paper-scissors
     def get_game_result(self, user_item, computer_item):
         if user_item == computer_item:
-            return "Draw"
+            return "Draw"  # Same choice means it's a draw
         elif (user_item == 'r' and computer_item == 's') or \
              (user_item == 'p' and computer_item == 'r') or \
              (user_item == 's' and computer_item == 'p'):
-            return "You win!"
+            return "You win!"  # User wins if their choice beats the computer's
         else:
-            return "Computer wins!"
+            return "Computer wins!"  # Otherwise, the computer wins
 
+    # Main game loop: keep playing until the user quits
     def play(self):
         while True:
-            user_item = self.get_user_item()
+            user_item = self.get_user_item()  # Get user's choice
             if user_item is None:
-                break
-            computer_item = self.get_computer_item()
-            result = self.get_game_result(user_item, computer_item)
-            print(result)
+                break  # Exit the loop if user wants to quit
+            computer_item = self.get_computer_item()  # Get computer's choice
+            result = self.get_game_result(user_item, computer_item)  # Determine the result
+            print(result)  # Show the result
 
-game = Game()
-game.play()
+# # Create a Game object and start playing - for testing file game.py
+# # if __name__ == "__main__":
+#     game = Game()
+#     game.play()
+
