@@ -47,3 +47,4 @@
 --   PRIMARY KEY (movie_id),
 --   FOREIGN KEY (fk_director_id) REFERENCES directors(director_id) ON DELETE CASCADE
 -- );
+
