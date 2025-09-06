@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<select id="musicgenre" multiple>
+    <option value="blues" selected>Blues</option>
+    <option value="rock" selected>Rock</option>
+    <option value="classic">Classic</option>
+</select>
+
+<script>
+//get the select form
+let dropdown = document.getElementById('musicgenre')
+
+// get all selected values from multi-select
+let selected = Array.from(dropdown.options)
+.filter(option => option.selected)
+.map(option => option.value);
+console.log(selected); //["blues","rock"]
+
+//add new option to the option list, set it as selected
+
+let option = new Option('newoption','newoption',true,true)
+select.add(option)
+
+// get all selected values from multi-select
+
+selected = Array.from(dropdown.options)
+.filter(option => option.selected)
+.map(option => option.value);
+console.log(selected); //["blues","rock","newoption"]
+</script>
+</body>
+</html>
