@@ -1,0 +1,52 @@
+<html>
+<body>
+  <div id="container">Users:</div>
+  <ul class="list">
+    <li>John</li>
+    <li>Pete</li>
+  </ul>
+  <ul class="list">
+    <li>Sarah</li>
+    <li>Dan</li>
+  </ul>
+
+  <script> 
+ <!-- //1
+  document.getElementById(#container);
+  document.querySelector("div");
+
+  //2
+  document.getElementsByTagName("ul");
+  document.getElementsByClassName("list");
+  document.querySelectorAll("ul.list");
+
+  //3
+  document.querySelectorAll("ul.list");
+  ul.children[0].textContent;
+
+  document.querySelectorAll("ul li:first-child");
+  
+-->
+
+// Get the anchor element by its ID
+const link = document.getElementById("dI");
+
+// Retrieve attribute values
+const hrefValue = link.getAttribute("href");
+const hreflangValue = link.getAttribute("hreflang");
+const relValue = link.getAttribute("rel");
+const targetValue = link.getAttribute("target");
+const typeValue = link.getAttribute("type");
+
+// Output the values (for example, to the console)
+console.log("href:", hrefValue);
+console.log("hreflang:", hreflangValue);
+console.log("rel:", relValue);
+console.log("target:", targetValue);
+console.log("type:", typeValue);
+
+
+
+  </script>
+</body>
+</html>
