@@ -4,10 +4,10 @@ let planets = [
   { name: 'Venus', color: '#e1c16e', moons: 0 },
   { name: 'Earth', color: '#2e8b57', moons: 1 },
   { name: 'Mars', color: '#b22222', moons: 2 },
-  { name: 'Jupiter', color: '#d2b48c', moons: 79 },
-  { name: 'Saturn', color: '#deb887', moons: 83 },
-  { name: 'Uranus', color: '#66cdaa', moons: 27 },
-  { name: 'Neptune', color: '#4682b4', moons: 14 }
+  { name: 'Jupiter', color: '#d2b48c', moons: 5 },
+  { name: 'Saturn', color: '#deb887', moons: 6 },
+  { name: 'Uranus', color: '#66cdaa', moons: 3 },
+  { name: 'Neptune', color: '#4682b4', moons: 4 }
 ];
 
 
