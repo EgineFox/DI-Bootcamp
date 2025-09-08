@@ -24,3 +24,36 @@ console.log(lastNameInputs[0]);  // Logs the first input with name="lastname"
 - make sure that they are not empty,
 - create an li per input value,
 - then append them to a the <ul class="usersAnswer"></ul>, below the form.
+*/
+
+   const ul = document.querySelector('.usersAnswer');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent page reload
+
+    // Get and trim input values
+    const firstName = document.getElementById('fname').value.trim();
+    const lastName = document.getElementById('lname').value.trim();
+
+    // Clear previous entries (optional)
+    ul.innerHTML = '';
+
+    // Validate inputs
+    if (firstName && lastName) {
+      // Create <li> for each value
+      const liFirst = document.createElement('li');
+      liFirst.textContent = firstName;
+
+      const liLast = document.createElement('li');
+      liLast.textContent = lastName;
+
+      // Append to <ul>
+      ul.appendChild(liFirst);
+      ul.appendChild(liLast);
+      console.log('Task 4 is done');
+    } else {
+      alert('Please fill in both fields.');
+    }
+  });
+
+
