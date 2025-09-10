@@ -1,4 +1,4 @@
-let currentInputs = {}; // Stores the latest user inputs
+let currentInputs = {}; // empty object for stores the latest user inputs
 
 function getUserInputs() {
     currentInputs.noun = document.getElementById('noun').value;
