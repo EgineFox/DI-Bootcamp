@@ -1,0 +1,123 @@
+body {
+    background: radial-gradient(circle, rgb(247, 38, 136), rgb(248, 43, 91));;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers children horizontally */
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+}
+
+#taskForm, 
+.listTasks {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+#taskForm {
+  display: flex; 
+  align-items: center;
+  padding: 5px;
+  width: 300px;
+  position: relative;
+  width: 300px;
+  
+}
+
+#taskForm input {
+ width: 100%;
+ padding-right: 40px;
+ height: 30px;
+ font-size: 16px;
+}
+
+#taskForm button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(65, 173, 251);
+}
+
+.listTasks {
+  display: none;
+  position: relative;
+  margin-top: 5px;
+  background-color: aliceblue;
+  justify-content: center;
+  align-items: flex-start; /* aligns items to the top/left */
+  text-align: left;
+  width: 290px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;       
+  margin-left: 0;     
+  list-style-position: inside; 
+  text-align: left;     
+
+}
+
+li {
+display: flex;
+align-items: center;
+text-align: left;
+border-bottom: 1px solid #8abcfc;
+padding: 8px 0;
+gap: 3px;
+}
+
+li * {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+li i {
+  --width: 16px;
+  width: var(--width);
+  height: var(--width);
+  cursor: pointer;
+}
+
+li *::before {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+li.is-done {
+  text-decoration: line-through;
+  opacity: 0.6;
+
+}
+
+.clear {
+  position: absolute;           /* позволяет точно позиционировать */
+  bottom: 10px;                 /* отступ от нижнего края */
+  right: 10px;                  /* отступ от правого края */
+  background-color: transparent; /* прозрачный фон */
+  border: none;                 /* убирает рамку */
+  color: rgb(216, 34, 125);               /* наследует цвет текста */
+  cursor: pointer;              /* курсор "рука" */
+  font-size: 14px;              /* размер текста */
+}
