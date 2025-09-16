@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juice Bar</title>
+</head>
+<body>
+  <div id="juice-order"></div>
+
+
+
+  <script>
+    function makeJuice(size) {
+      const ingredients = [];
+
+
+
+      function addIngredients(ing1, ing2, ing3) {
+        ingredients.push(ing1, ing2, ing3);
+      }
+
+
+
+      function displayJuice() {
+        const message = `The client wants a ${size} juice, containing ${ingredients.join(", ")}.`;
+        document.getElementById("juice-order").textContent = message;
+      }
+
+
+
+      // Add 6 ingredients total
+      addIngredients("apple", "banana", "mint");
+      addIngredients("ginger", "pineapple", "lemon");
+
+
+
+      // Display the final juice order
+      displayJuice();
+    }
+
+
+
+    // Invoke the outer function
+    makeJuice("large");
+  </script>
+</body>
+</html>
+
+
