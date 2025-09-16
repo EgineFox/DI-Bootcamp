@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juice Bar</title>
+</head>
+<body>
+  <div id="juice-order"></div>
+
+
+
+  <script>
+    function makeJuice(size) {
+      function addIngredients(ing1, ing2, ing3) {
+        const message = `The client wants a ${size} juice, containing ${ing1}, ${ing2}, ${ing3}.`;
+        document.getElementById("juice-order").textContent = message;
+      }
+
+
+
+      addIngredients("apple", "banana", "mint");
+    }
+
+
+
+    // Invoke the outer function
+    makeJuice("medium");
+  </script>
+</body>
+</html>
