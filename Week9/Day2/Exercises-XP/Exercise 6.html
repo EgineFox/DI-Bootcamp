@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fortune Teller</title>
+</head>
+<body>
+  <div id="fortune"></div>
+
+
+
+  <script>
+    (function(children, partner, location, job) {
+      const message = `You will be a ${job} in ${location}, and married to ${partner} with ${children} kids.`;
+      document.getElementById("fortune").textContent = message;
+    })(3, "Alex", "Tokyo", "software developer");
+  </script>
+</body>
+</html>
+
+
+
+<!-- Explanation:
+- The function is wrapped in parentheses and immediately invoked with the values (3, "Alex", "Tokyo", "software developer").
+- It creates a message and inserts it into the DOM element with id="fortune". -->
+
+
