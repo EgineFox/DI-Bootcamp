@@ -13,7 +13,7 @@ function funcOne() {
 
 // #1.2 - What if `const` is used instead of `let`?
 // If `a` is declared with `const`, the reassignment `a = 3` will throw a TypeError.
-// Explanation: `const` variables cannot be reassigned after their initial declaration.
+
 
 // #2
 let a = 0;
@@ -35,8 +35,6 @@ function funcThree() {
 
 // #2.2 - What if `const` is used instead of `let`?
 // If `a` is declared with `const`, funcTwo() will throw a TypeError when trying to reassign `a`.
-// Explanation: `const` prevents reassignment, so modifying `a` inside funcTwo would not be allowed.
-
 
 
 // #3
