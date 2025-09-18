@@ -34,12 +34,13 @@ console.log(usernames);
 
 // 2. Create an array using forEach that contains the usernames of all players with a score bigger than 5.
 const winners = [];
-gameInfo.forEach(player => {
+gameInfo.forEach(player => { 
   if (player.score > 5) {
     winners.push(player.username);
   }
 });
 console.log(winners);
+
 
 // 3.  Find and display the total score of the users. (Hint: The total score is 71)
 
@@ -48,3 +49,7 @@ gameInfo.forEach(player => {
   totalScore += player.score;
 });
 console.log(totalScore);
+
+
+// reduse
+
