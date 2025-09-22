@@ -1,0 +1,45 @@
+body {
+    background-color: #3399ff;
+}
+
+h1 { 
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight: bold;
+}
+
+.choose {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    
+}
+
+.chooseb {
+    border-radius: 25%;
+    background-color: #1a53ff;
+    border-color: #1a53ff;
+    color: white;
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    border: 2px solid;
+    cursor: pointer;
+}
+.board {
+display: none;
+}
+
+table {
+   font-family: "Permanent Marker" , cursive;
+   font-size: 50px;
+   text-align: center;
+}
+
