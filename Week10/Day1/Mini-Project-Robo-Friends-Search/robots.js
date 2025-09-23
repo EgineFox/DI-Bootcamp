@@ -70,3 +70,13 @@ const robots = [
             image:'https://robohash.org/10?200x200'
           }
           ];
+
+const header = document.createElement('div');
+header.setAttribute('class', 'header');
+header.style.width = '50px';
+header.style.height = window.innerWidth + 'px';
+
+header.style.backgroundColor = 'green';
+document.body.appendChild(header);
+
+
