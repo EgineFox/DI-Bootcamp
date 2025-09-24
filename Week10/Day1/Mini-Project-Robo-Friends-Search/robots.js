@@ -138,6 +138,7 @@ container.style.justifyItems = 'center';
 container.style.gap = '30px';
 body.appendChild(container);
 
+// function creating of cards with robots
 function createRoboCards(robots) {
   // clean old cards;
   container.innerHTML = "";
@@ -182,7 +183,7 @@ function createRoboCards(robots) {
 
 createRoboCards(robots);
 
-
+//searching
 function searchFunc() {
   const query = searchField.value.trim().toLowerCase();
 
