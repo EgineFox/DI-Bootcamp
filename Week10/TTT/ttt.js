@@ -6,17 +6,27 @@ let player, computer, currentPlayer;
 let turns = ['','','','','','','','',''];
 
 let board = document.querySelector('.board');
+
 const cells = document.querySelectorAll('.cell');
 const choose = document.querySelector('.choose');
 const buttonX = document.querySelector('#X');
 const buttonO = document.querySelector('#O');
+
+const btnRestart = document.createElement('button');
+btnRestart.textContent = 'Restart Game';
+btnRestart.style.margin = '20px';
+board.appendChild(btnRestart);
 
 buttonX.addEventListener('click', function() {
         player = 'X';
         computer = 'O';
         currentPlayer = 'X';
         choose.style.display = "none";    
-        board.style.display = "block";
+        board.style.display = 'flex';
+        board.style.flexDirection = 'column';
+        board.style.justifyContent = 'center';
+        board.style.alignItems = 'center';
+        board.style. margin = '50px';
         play();
 
     });
@@ -25,9 +35,15 @@ buttonO.addEventListener('click', function() {
         computer = 'X';
         currentPlayer = 'O';
         choose.style.display = "none";
-        board.style.display = "block";
+        board.style.display = 'flex';
+        board.style.justifyContent = 'center';
+        board.style.flexDirection = 'column';
+        board.style.alignItems = 'center';
+        board.style. margin = '50px';
         play();
     });
+
+btnRestart.addEventListener('click', restartGame ) ;   
 
 const winCombos = [
            [0, 1, 2],
@@ -92,6 +108,8 @@ function checkWinner() {
     if(roundWon) {
         alert(`${currentPlayer} wins!`);
         running = false;
+        
+
     } else if(!turns.includes("")) {
         alert(`Draw!`);
         running = false;
@@ -111,7 +129,7 @@ function computerTurn() {
 
     if (!turns.includes("") || !running) return;
 
-    // Найти все пустые ячейки
+    // Find all empty cells
     const emptyCells = [];
     for (let i = 0; i < turns.length; i++) {
         if (turns[i] === "") {
@@ -119,15 +137,22 @@ function computerTurn() {
         }
     }
 
-    // Выбрать случайную пустую ячейку
+    // Choose random empty cell
     const randomIndex = emptyCells[Math.floor(Math.random() * emptyCells.length)];
     const cell = document.getElementById(randomIndex);
 
-    // Сделать ход
+    // Get turn
     turns[randomIndex] = computer;
     cell.textContent = computer;
 
     checkWinner();
    }
 
+
+   function restartGame() {
+   turns = ['','','','','','','','',''];
+   cells.forEach(cell => {cell.textContent = '';});
+   choose.style.display = "block";
+   board.style.display = 'none';
+   }
 
