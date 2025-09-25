@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  
+
+    <script>
+let landscape = function() {
+
+let result = "";
+
+let flat = function(x) {
+   for(let count = 0; count<x; count++){
+     result = result + "_";
+   }
+ }
+
+let mountain = function(x) {
+    result = result + "/";
+    for(let counter = 0; counter < x; counter++) {
+      result = result + "'";
+    }
+    result = result + "\\";
+  }
+
+flat(4);
+mountain(4);
+flat(4);
+
+ return result;
+};
+
+console.log(landscape()) ;
+
+    </script>
+</body>
+</html>
