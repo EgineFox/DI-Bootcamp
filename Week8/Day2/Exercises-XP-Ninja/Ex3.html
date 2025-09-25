@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3 : Get the user’s geolocation coordinates</title>
+</head>
+<body>
+    <h2> Find my location</h2>
+    <button id = 'getLocationBtn'> Get coordinates</button>
+    <p id="output"></p>
+
+
+    <script>
+        const btn = document.getElementById('getLocationBtn');
+        const output = document.getElementById('output');
+
+        btn.addEventListener('click', ()=>{
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    output.textContent = `Latitude: ${latitude} \n Longitude: ${longitude}`;
+                },
+                (error)=>{
+                    output.textContent = `Error: ${error.message}`;
+                }
+                );
+       
+            } else {
+            output.textContent = 'Geolocation is not supported by your browser';
+            }
+        });
+    </script>
+</body>
+</html>
