@@ -120,10 +120,6 @@ function checkWinner() {
 }
 
 
-function restart(){
-
-}
-
 function computerTurn() {
     currentPlayer = computer;
 
