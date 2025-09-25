@@ -171,8 +171,7 @@ function createRoboCards(robots) {
     background-color: #191970;
     object-fit: cover;
     margin: 20px auto 10px auto;
-    display: block;
-  " />
+    " />
   <h2 style="font-size:15px; font-family: Arial, sans-serif; text-align:left; margin: 10px">${robot.name}</h2>
   <p style="text-align:left; font-family: Arial, sans-serif; font-size:10px; margin: 10px;">${robot.email}</p>
 `;
@@ -196,7 +195,7 @@ function searchFunc() {
     createRoboCards(result);
     } else {
     alert(`${searchField.value} wasn't found! Try again...`);
-    createRoboCards(robots);container.innerHTML = "<p style='color: white; font-size: 18px;'>No robots found.</p>";
+    createRoboCards(robots);
 }
 searchField.value = "";
 }
