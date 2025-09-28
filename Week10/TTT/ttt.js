@@ -67,7 +67,7 @@ function play() {
 function cellClicked() {
     const cellIndex = parseInt(this.id); 
 
-    if (turns[cellIndex] != "" || !running) {
+    if (turns[cellIndex] != "" ) {
         return;
     }
 
