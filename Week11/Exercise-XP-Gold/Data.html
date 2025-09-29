@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+            const UrlParams = new URLSearchParams(window.location.search);
+            const name = UrlParams.get('name');
+            const lastname = UrlParams.get('lastname');
+            
+            const body = document.querySelector('body');
+            const span = document.createElement("span");
+            body.appendChild(span);
+            span.textContent =` Hello, ${name}  ${lastname}!`;
+
+        
+        
+    </script>
+</body>
+</html>
