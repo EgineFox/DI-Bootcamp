@@ -35,7 +35,8 @@ const myPromise = new Promise((resolve, reject) => {
     }, 4000)
 })
 
-myPromise.then(result => console.log(result));
+myPromise
+  .then(result => console.log(result));
 
 
 /* Exercise 3 : Resolve & Reject
