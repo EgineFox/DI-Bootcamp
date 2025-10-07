@@ -1,0 +1,95 @@
+
+body {
+    background-color: black;
+    background-image: url('/Week12/Day1/Mini-project-stars-war/200.webp');
+    font-family: "Helvetica Neue";
+    color: yellow;
+    text-align: center;
+}
+
+.logo {
+
+  background: url("/Week12/Day1/Mini-project-stars-war/hd-yellow-black-star-wars-logo-png-701751694786976t6vjctcvx8.png") center center no-repeat;
+  width: 400px;
+  height: 300px;
+  margin:  0 auto;
+  background-size: contain;
+  margin-top: -20px; 
+}
+#wraper{
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+}
+.container{
+  border: 3px solid yellow;
+  border-radius: 15px;
+  width: 600px;
+  height: 250px;
+  margin: 0 auto;
+  margin-top: -25px;
+ }
+
+h1{
+    margin-top: 10px;
+}
+p {
+    margin: auto;
+
+}
+
+.fa {
+   color: rgba(255, 255, 255, 0.5);
+}
+
+.transparent-text{
+   color: rgba(255, 255, 255, 0.5);
+}
+
+#find{
+	margin-top: 20px;
+	border: 3px solid yellow;
+	border-radius: 10px;
+	width: 180px;
+	height: 40px;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+button:focus {
+	outline:0;
+}
+
+#name{
+	color: white;
+	font-size: 30px;
+	}
+
+#height{
+	color: white;
+	font-size: 20px;
+}
+
+#gender{
+	color: white;
+	font-size: 20px;
+}
+
+#birth_year{
+	color: white;
+	font-size: 20px;
+}
+
+#home{
+    color: white;
+	font-size: 20px;
+}
+
+
+p{
+	color: white;
+	font-weight: bold;
+	font-size: 30px;
+    display: block;
+}
