@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Web App Using AJAX API</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div id="wraper">
+        <div class="logo">
+
+        </div>
+        <div class="container" id="container">
+           
+            <h1 id="name"></h1> <br>
+            <p id="height"></p> <br>
+            <p id="gender"></p> <br>
+            <p id="birth_year"></p> <br>
+            <p id="home"></p> <br>
+    
+        </div>
+
+         <button type="button" id="find"> Find Someone </button>
+    </div>
+
+
+
+
+<script>
+    
+    //  The API contains 83 different characters
+    
+    // 1. Create your HTML file, and add the relevant elements.
+    
+    
+    // 2. In your JS file, create your functions :
+    // to retrieve the elements from the DOM.
+    // to get the data from the API (star wars characters).
+    // to display the info on the DOM: the name, height, gender, birth year, and home world of the character.
+    const wraper = document.getElementById('wraper');
+    const name = document.getElementById('name');
+    const height = document.getElementById('height');
+    const gender = document.getElementById('gender');
+    const birth_year = document.getElementById('birth_year');
+    const home = document.getElementById('home');
+     
+// improve
+    const getCharacter = async(id) => {
+        const url = `https://swapi.tech/api/people/${id}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            updateInfoWithError();
+            throw new Error(`Character fetch failed: ${response.status}`);
+        }
+        return await response.json();
+    }
+
+    const getHomeWorld = async(url) => {
+        const response = await fetch(url);
+        if (!response.ok) {
+            updateInfoWithError();
+            throw new Error(`Homeworld fetch failed: ${response.status}`);
+        }
+        return await response.json();
+    }
+
+    const displayCharacter = (character, homeworld) => {
+        name.textContent = `Name: ${character.name}`;
+        height.textContent = `Height: ${character.height}`;
+        gender.textContent =`Gender: ${character.gender}`;
+        birth_year.textContent = `Birth Year: ${character.birth_year}`;
+        home.textContent =`Home World: ${homeworld.name}`;
+    }
+    
+    //Display when Error
+function updateInfoWithError(){
+  name.innerText = 'Oh No! Something was wrong.';
+  height.innerText = ''
+  gender.innerText = ''
+  birth_year.innerText = ''
+  home.innerText = ''
+}
+
+//Display when updating info (pending data)
+function updateWithLoading(){
+  name.innerHTML = '<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i> <br> <span class="transparent-text">Loading...</span>';
+  height.innerText = ''
+  gender.innerText = ''
+  birth_year.innerText = ''
+  home.innerText = ''
+}
+
+const mainFunction = async (e) => {
+        e.preventDefault();
+        updateWithLoading();
+        try {
+            
+
+            const id = Math.floor(Math.random()*82) + 1;
+            const charData = await getCharacter(id);
+            const character = charData.result.properties;
+
+            const homeWorldData = await getHomeWorld(character.homeworld);
+            const homeWorld = homeWorldData.result.properties;
+         
+            displayCharacter(character, homeWorld);
+
+            } catch(error) {
+        console.error(error);
+        wraper.textContent = 'Error data download. Try again'
+    }
+};
+     
+
+const findBtn = document.getElementById('find');
+
+findBtn.addEventListener('click', mainFunction);
+
+
+/*    first trying:
+
+    const mainFunction = async (e) => {
+        e.preventDefault();
+        try {
+            const indexPers = Math.floor(Math.random()*82) + 1;
+            //The Base URL for swapi -- get a specific people resource -- is:
+        const url = `https://swapi.tech/api/people/${indexPers}`;
+            
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`Got error: ${response.status}`);
+        }
+
+        const json = await response.json();
+
+        const url_homeWorld = json.result.properties.homeworld;
+        const response_homeWorld = await fetch(url_homeWorld);
+        const json_homeWorld = await response_homeWorld.json(); 
+        
+        name.textContent = json.result.properties.name;
+        height.textContent = json.result.properties.height;
+        gender.textContent = json.result.properties.gender;
+        birth_year.textContent = json.result.properties.birth_year;
+
+        home.textContent = json_homeWorld.result.properties.name;
+
+    } catch(error) {
+        console.error(error);
+    }
+};
+     
+
+const findBtn = document.getElementById('find');
+
+findBtn.addEventListener('click', mainFunction);
+*/
+</script>    
+</body>
+</html>
