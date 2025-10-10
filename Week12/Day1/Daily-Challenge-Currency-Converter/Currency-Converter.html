@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Daily Challenge: Currency Converter</title>
 </head>
 <body>
@@ -22,9 +23,12 @@
     
     <label for="amount">Amount:</label> <br>
     <input type="number" name="amount" id="amount"> <br>
+    <br>
     <button id="convert">Convert</button>
     <button id="switch"> Switch</button>
-
+     <br>
+     <br>
+    <div id="date"></div>
     <div id="result"></div>
 </form>
 
@@ -36,6 +40,8 @@
     const selectTo = document.getElementById('to_currency');
     const btn_convert = document.getElementById('convert');
     const amountInput = document.getElementById('amount');
+
+    const dateDiv = document.getElementById('date');
     const resultDiv = document.getElementById('result');
 
 
@@ -58,28 +64,32 @@ try {
       selectTo.appendChild(optionTo);
       });
 
-
-
 } catch(error) {
     console.log(`${error.message}`);
 } };
-
 
 const convertCurrency = async () => {
     const from = selectFrom.value;
     const to = selectTo.value;
     const amount = parseFloat(amountInput.value);
 
-    if (!from || !to || isNaN(amount)) {
-      resultDiv.textContent = `Please choose a currency and and amount`;
+    if (!from) {
+      resultDiv.textContent = `Please select the transfer currency`;
+      return;
+    } else if (!to) {
+      resultDiv.textContent = `Please select the currency into which you want to convert the selected currency.`;
+      return;
+    } else if (!to || isNaN(amount)) {
+      resultDiv.textContent = `Please enter amount`;
       return;
     }
+
      const URL_convert = `https://v6.exchangerate-api.com/v6/${myAPI_KEY}/pair/${from}/${to}/${amount}`;
     try {
       const response = await fetch(URL_convert);
       const data = await response.json();
       const converted = data.conversion_result;
-
+     dateDiv.textContent = `As of the date of the last update: ${new Date(data.time_last_update_utc).toLocaleDateString()}`;
      resultDiv.textContent = `Course: 1 ${from} = ${data.conversion_rate} ${to}
      ${amount} ${from} = ${converted.toFixed(2)} ${to}`;
 
