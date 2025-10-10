@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokedex App</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="console">
+            <div id="logo">
+                <img src="logo.png" alt="" id="pokelogo">
+            </div>
+            <div id="conatainer">
+              <!--   <img src="pokedex.png" alt="" id="back"> -->
+                <img src="" alt="" id="pic" style="display: none;">
+                <h1 id="name"></h1>
+                <div class="details">
+                    <p id="id"></p>
+                    <p id="height"></p>
+                    <p id="weight"></p>
+                    <p id="type"></p>
+
+                </div>
+            </div>
+    
+            <div class="buttons">
+                <button id="get_pokemon">Fetch</button>
+                <button id="next_pokemon" style="display: none;">Next</button>
+                <button id="pre_pokemon" style="display: none;">Previous</button>
+    
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+const name = document.getElementById('name');
+const pic = document.getElementById('pic');
+const id = document.getElementById('id');
+const height = document.getElementById('height');
+const weight = document.getElementById('weight');
+const type = document.getElementById('type');
+
+
+
+
+const next_btn = document.getElementById('next_pokemon');
+const pre_btn = document.getElementById('pre_pokemon');
+
+
+const url_api = `https://pokeapi.co/api/v2/pokemon/`;
+let currentIndex = 1;
+let countPokemons = 0;
+
+// getting count of pokemons in API
+const getCountPokemon = async() => {
+    try {
+        const response = await fetch(url_api);
+        if (!response.ok) {
+            showError(response.status);
+            throw new Error(`Pokemon's count fetch failed: ${response.status}`);
+        }
+        const data = await response.json();
+        countPokemons = data.count;
+        // console.log(typeof(countPokemons)); just test for type of count
+        console.log(countPokemons);
+        return countPokemons;
+    } 
+    catch(error) {
+     showError(error);
+    } 
+}
+
+// getting random number of pokemon for first fetch
+const getRandomIndex = async() => {
+    try {
+        countPokemons = await getCountPokemon();
+        const rand_index = Math.floor(Math.random()*countPokemons) + 1;
+        console.log(rand_index); // testing
+        return rand_index;
+    } 
+    catch(error) {
+     showError(error);
+    } 
+}
+
+ 
+// getting data about random pokemon
+const getPokemon = async() => {
+    loadData();
+    try {
+        const index = await getRandomIndex();
+        
+        const url_pokemon = `https://pokeapi.co/api/v2/pokemon/${index}`; // find pokemon by random index
+        const response = await fetch(url_pokemon);
+        if (!response.ok) {
+            showError(response.status);
+            throw new Error(`Pokemon fetch failed: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data);
+               
+        showDetails(data);
+        // Display buttons for next/previous pokemons
+        next_btn.style.display = 'block';
+        pre_btn.style.display = 'block';
+        // Renew current index in global for serch next/pre
+        currentIndex = index;
+        return index;
+ 
+    } 
+    catch(error) {
+     showError(error);
+    }
+}
+
+const nextPokemon = async(index) => {
+    if (currentIndex === countPokemons) {
+        name.textContent = 'Oh... this is was last pokemon in our list... But we can show you ours fist! Let\'s see!';
+        index = 0;
+    }
+    const index_next = index + 1;
+    loadData();
+    try {
+        const url_pokemon = `https://pokeapi.co/api/v2/pokemon/${index_next}`; // find pokemon by next index
+       const response = await fetch(url_pokemon);
+       if (!response.ok) {
+           showError(response.status);
+           throw new Error(`Pokemon fetch failed: ${response.status}`);
+       }
+       const data = await response.json();
+       showDetails(data);
+       currentIndex = index_next;
+        }
+        catch(error) {
+         showError(error);
+        }
+             
+        return index_next;
+    
+}
+
+const previousPokemon = async(index) => {
+    if (currentIndex === 1) {
+        name.textContent = 'Oh... this is was first pokemon in our list... But we can show you ours last! Let\'s see!';
+        index = countPokemons + 1;
+    }
+
+    const index_pre = index - 1;
+    loadData();
+    try {
+         const url_pokemon = `https://pokeapi.co/api/v2/pokemon/${index_pre}`; // find pokemon by pre index
+        const response = await fetch(url_pokemon);
+        if (!response.ok) {
+            showError(response.status);
+            throw new Error(`Pokemon fetch failed: ${response.status}`);
+        }
+        const data = await response.json();
+               
+        showDetails(data);
+        currentIndex = index_pre;
+        return index_pre;
+ 
+    } 
+    catch(error) {
+     showError(error);
+    }
+}
+
+
+const showError = (error) => {
+    name.textContent = '';
+    id.textContent = `Oh no!`;
+    height.textContent = `That Pokemon`;
+    weight.textContent = `isn't available…`;
+    type.textContent = '';
+     pic.src = 'notfound.webp';
+    console.log(`${error.message}`);
+}
+
+const showDetails = pokemon => {
+       let current_pokemon = pokemon.name;
+       name.textContent = current_pokemon;
+       id.textContent = `Id: ${pokemon.id}`;
+       height.textContent = `Height: ${pokemon.height} cm`;
+       weight.textContent = `Weight: ${pokemon.weight} kg`;
+       type.textContent = `Type: ${pokemon.types[0].type.name}`;
+       pic.style.display = 'block';
+       pic.src = getPicture(pokemon);
+}
+
+const getPicture = pokemon => {
+    let picture;
+    pic.style.display = 'block';
+    // optional chaining 
+        picture = pokemon?.sprites?.versions?.['generation-v']?.['black-white']?.animated?.front_default || noAnimatedPic(pokemon.id);
+        
+    return picture;
+}
+
+const noAnimatedPic = pokemon => {
+    const picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon}.png`;
+    return picture;
+}
+
+const loadData = ()=> {
+   name.textContent = `Please wait`;
+   pic.style.display = 'block';
+   pic.src = 'loading.webp';
+}
+
+const btn_fetch = document.getElementById('get_pokemon') 
+btn_fetch.onclick = async() => {
+    currentIndex = await getPokemon();
+}
+
+next_btn.onclick = async() => {
+currentIndex = await nextPokemon(currentIndex);
+};
+
+pre_btn.onclick = async() => {
+currentIndex = await previousPokemon(currentIndex);
+};
+    </script>
+</body>
+</html>
