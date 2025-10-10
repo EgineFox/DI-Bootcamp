@@ -20,7 +20,10 @@ gifForm.addEventListener('submit', async (event) => {
     try {
         // Fetch data from Giphy API
         const response = await fetch(url);
-        const data = await response.json(); // Extract 'data' from response
+        /* const json = await response.json();
+        const data = json.data;*/
+        const {data} = await response.json(); // Extract 'data' from response with 1code string (destructuring);
+
         const gifUrl = data.images.original.url; // Get GIF URL from 'images' object
 
         // Create a container for the GIF and its delete button
