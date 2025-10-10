@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Challenge: Currency Converter</title>
+</head>
+<body>
+    
+    <div id="container">
+        <h1>Currency Converter</h1>
+<form action="" class="convert">
+    <label for="from_currency">From:</label> <br>
+    <select name="" id="from_currency">
+        
+    </select> <br>
+    
+    <label for="to_currency">To:</label> <br>
+    <select name="" id="to_currency">
+        
+    </select><br>
+    
+    <label for="amount">Amount:</label> <br>
+    <input type="number" name="amount" id="amount"> <br>
+    <button id="convert">Convert</button>
+    <button id="switch"> Switch</button>
+
+    <div id="result"></div>
+</form>
+
+    </div>
+</body>
+<script>
+    const myAPI_KEY = '5d9dff73b1e279d8269a582e';
+    const selectFrom = document.getElementById('from_currency');
+    const selectTo = document.getElementById('to_currency');
+    const btn_convert = document.getElementById('convert');
+    const amountInput = document.getElementById('amount');
+    const resultDiv = document.getElementById('result');
+
+
+    const loadCurrency = async() => {
+     const URL_currency = `https://v6.exchangerate-api.com/v6/${myAPI_KEY}/codes`;
+try {
+     const response = await fetch(URL_currency);
+      const data = await response.json();
+      const currencies = data.supported_codes;
+
+      currencies.forEach(([code, name]) => {
+      const optionFrom = document.createElement('option');
+      optionFrom.value = code;
+      optionFrom.textContent = `${code} - ${name}`;
+      selectFrom.appendChild(optionFrom);
+
+      const optionTo = document.createElement('option');
+      optionTo.value = code;
+      optionTo.textContent = `${code} - ${name}`;
+      selectTo.appendChild(optionTo);
+      });
+
+
+
+} catch(error) {
+    console.log(`${error.message}`);
+} };
+
+
+const convertCurrency = async () => {
+    const from = selectFrom.value;
+    const to = selectTo.value;
+    const amount = parseFloat(amountInput.value);
+
+    if (!from || !to || isNaN(amount)) {
+      resultDiv.textContent = `Please choose a currency and and amount`;
+      return;
+    }
+     const URL_convert = `https://v6.exchangerate-api.com/v6/${myAPI_KEY}/pair/${from}/${to}/${amount}`;
+    try {
+      const response = await fetch(URL_convert);
+      const data = await response.json();
+      const converted = data.conversion_result;
+
+     resultDiv.textContent = `Course: 1 ${from} = ${data.conversion_rate} ${to}
+     ${amount} ${from} = ${converted.toFixed(2)} ${to}`;
+
+    } catch (error) {
+      resultDiv.textContent = 'Error convertation';
+      console.error(error.message);
+    }
+  };
+const btn_switch = document.getElementById('switch');
+
+btn_switch.onclick = async (e) => {
+  e.preventDefault();
+
+  const fromValue = selectFrom.value;
+  const toValue = selectTo.value;
+
+  selectFrom.value = toValue;
+  selectTo.value = fromValue;
+
+  await convertCurrency();
+};
+
+
+window.onload =loadCurrency;
+
+btn_convert.onclick = async (e) => {
+   e.preventDefault();
+   await convertCurrency();
+};
+
+</script>
+</html>
