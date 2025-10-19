@@ -79,7 +79,7 @@ const convertCurrency = async () => {
     } else if (!to) {
       resultDiv.textContent = `Please select the currency into which you want to convert the selected currency.`;
       return;
-    } else if (!to || isNaN(amount)) {
+    } else if (isNaN(amount)) {
       resultDiv.textContent = `Please enter amount`;
       return;
     }
@@ -90,7 +90,7 @@ const convertCurrency = async () => {
       const data = await response.json();
       const converted = data.conversion_result;
      dateDiv.textContent = `As of the date of the last update: ${new Date(data.time_last_update_utc).toLocaleDateString()}`;
-     resultDiv.textContent = `Course: 1 ${from} = ${data.conversion_rate} ${to}
+     resultDiv.textContent = `Course: 1 ${from} = ${data.conversion_rate} ${to}. 
      ${amount} ${from} = ${converted.toFixed(2)} ${to}`;
 
     } catch (error) {
