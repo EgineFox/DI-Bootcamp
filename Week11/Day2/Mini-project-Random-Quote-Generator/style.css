@@ -1,0 +1,52 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f1ee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#quotes {
+  background-color: #d8c4b0;
+  padding: 30px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+#generate, #like{
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#generate:hover {
+  background-color: #2563eb;
+}
+
+.quote-icon {
+  font-size: 40px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+#quote {
+  font-size: 18px;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+#author {
+  font-size: 16px;
+  color: #60a5fa;
+  text-align: right;
+}
