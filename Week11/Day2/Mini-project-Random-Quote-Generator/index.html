@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini project - Random Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="quotes">
+        <button id="generate">Generate Quote</button>
+        <button id="like"> Like</button>
+        <div class="quote-icon">“</div>
+        <div id="quote"></div>
+        <div id="author"></div>
+    </section>
+    <br>
+
+    <form action="" id="newquote">
+      <label for="new_quote_text">Enter a new quote:</label> <br>
+      <textarea name="" id="new_quote_text" rows="10" cols="30"></textarea> <br>
+      <label for="new_author">Enter a name of author:</label><br>
+      <input type="text" name="" id="new_author"> 
+      <button id="add_new_quote"> ADD</button> <br>
+      <br>
+       <label for="char_with_space">Show counts of characters in all quotes with spaces:</label> <br>
+      <button id="char_with_space">SHOW</button>
+      <div id="counts_char_with_space"></div>
+      <br>
+       <label for="char_no_space">Show counts of characters in all quotes without spaces:</label> <br>
+      <button id="char_no_space">SHOW</button>
+      <div id="counts_char_no_space"></div>
+      <br>
+       <label for="num_words">Show counts of words:</label> <br>
+      <button id="num_words">SHOW</button>
+      <div id="counts_words"></div>
+    </form>
+    <br>
+ <form action="" id="filter_quotes">
+<!-- Create a form, that will filter the quotes depending on the name of the author. When the button of the form is clicked, display all the quotes from this specific author.-->
+ <label for="filter_author_name">Enter author name:</label>
+ <br>
+
+ <input type="text" name="" id="filter_author_name">
+<button id="filter_btn">Filter by autor name</button>
+<div id="filter_result"></div>
+ </form>
+
+    <script>
+        /* In the Javascript file, create an array of objects. Each object has 3 keys : id, author and quote. The id must start at 0, and is incremented for every new quote. So the first quote will have the id 0, the second quote the id 1, the third quote the id 2 ect… 
+        Populate the array with a few quotes that you like */
+        let quotes = [
+            {
+               id: 0,
+               author: 'Albert Einstein',
+               quote: 'I have no special talent. I am only passionately curious.',
+               num_likes: 0
+            } ,
+            {
+               id: 2,
+               author: 'Confucius',
+               quote: 'It does not matter how slowly you go so long as you do not stop.',
+               num_likes: 0
+            } ,
+            {
+               id: 3,
+               author: 'Nelson Mandela',
+               quote: 'Education is the most powerful weapon which you can use to change the world.',
+               num_likes: 0
+            } ,
+            {
+               id: 4,
+               author: 'Socrates',
+               quote: 'The unexamined life is not worth living.',
+               num_likes: 0
+            } ,
+            {
+               id: 5,
+               author: 'Abraham Lincoln',
+               quote: 'Whatever you are, be a good one.',
+               num_likes: 0
+            } ,
+            {
+               id: 6,
+               author: 'Leonardo da Vinci',
+               quote: 'Simplicity is the ultimate sophistication.',
+               num_likes: 0
+            } ,
+            {
+               id: 7,
+               author: 'Maya Angelou',
+               quote: 'If you don\'t like something, change it. If you can\'t change it, change your attitude.',
+               num_likes: 0
+            } ,
+            {
+               id: 8,
+               author: 'Mahatma Gandhi',
+               quote: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
+               num_likes: 0
+            } ,
+            {
+               id: 9,
+               author: 'Nelson Mandela',
+               quote: 'I learned that courage was not the absence of fear, but the triumph over it.',
+               num_likes: 0
+            } ,
+            {
+               id: 10,
+               author: 'Winston Churchill',
+               quote: 'Success is not final; failure is not fatal: It is the courage to continue that counts.',
+               num_likes: 0
+            } 
+        ];
+// Part 1
+        let randomQuote = {};
+        const section = document.querySelector('section');
+    const getRandomIndex = () => {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        return randomIndex;
+       // console.log(randomIndex); test
+
+    }
+    
+    const getQuotes = index => {
+    randomQuote = quotes[index];
+    //console.log(randomQuote); //test
+    }
+
+    const displayQuote = (randomQuote) => {
+    const textQuote = document.getElementById('quote');
+    const author = document.getElementById('author');
+    
+    textQuote.textContent = randomQuote.quote;
+    author.textContent = randomQuote.author;
+    }
+// Part 2
+
+
+const add_nquote = () => {
+   const new_quote_text = document.getElementById('new_quote_text');
+   const new_author = document.getElementById('new_author');
+
+    let new_quote = {id: quotes.length, author: new_author.value, quote: new_quote_text.value};
+
+   quotes.push(new_quote);
+   new_author.value = '';
+   new_quote_text.value = '';
+}
+
+
+const btn_show_char_sp = document.getElementById('char_with_space');
+const div_char_sp = document.getElementById('counts_char_with_space');
+
+const counts_of_char = () => {
+  
+   div_char_sp.innerHTML = '';
+   quotes.forEach(quote => {
+      let div_quote = document.createElement('div');
+      div_quote.textContent = `in quote with id ${quote.id} there are ${quote.quote.length} characters`;
+      div_char_sp.appendChild(div_quote); 
+   });
+}
+
+const btn_show_char = document.getElementById('char_no_space');
+const div_char_no_sp = document.getElementById('counts_char_no_space');
+
+const counts_of_char_no_spaces = () => {
+   div_char_no_sp.innerHTML = '';
+   quotes.forEach(quote => {
+      let div_quote = document.createElement('div');
+      div_quote.textContent = `in quote with id ${quote.id} there are ${quote.quote.replaceAll(' ','').length} characters`;
+      div_char_no_sp.appendChild(div_quote); 
+   });
+}
+
+const btn_num_words = document.getElementById('num_words');
+const div_counts_words = document.getElementById('counts_words');
+
+const counts_of_words = () => {
+   div_counts_words.innerHTML = '';
+   quotes.forEach(quote => {
+      let div_quote = document.createElement('div');
+      div_quote.textContent = `in quote with id ${quote.id} there are ${quote.quote.split(' ').length} words`;
+      div_counts_words.appendChild(div_quote); 
+   });
+}
+
+const get_like = () => {
+   randomQuote.num_likes ++;
+   console.log(randomQuote);
+}
+
+const mask_of_name = document.getElementById('filter_author_name');
+const result_filter = document.getElementById('filter_result');
+const btn_filter = document.getElementById('filter_btn');
+
+const filter = () =>{
+const result = quotes.filter(quote => quote.author === mask_of_name.value);
+if (result.length === 0) {
+   result_filter.textContent = `No quotes found for author "${mask_of_name.value}".`;
+} else {
+   const quoteText = result.map(q => `${q.quote}`).join(', ');
+   result_filter.textContent = `Quotes by ${mask_of_name.value}: ${quoteText}`;
+
+}
+mask_of_name.value = '';
+}
+
+btn_filter.addEventListener ('click', filter);
+
+const btnAdd = document.getElementById('add_new_quote');
+btnAdd.onclick = (event) => {
+   event.preventDefault();
+   add_nquote();
+   console.log(quotes);
+}
+
+const btnGenerate = document.getElementById('generate');
+
+btnGenerate.onclick = ()=>{
+   getQuotes(getRandomIndex())
+   displayQuote(randomQuote);
+} 
+const btn_like = document.getElementById('like');
+btn_like.onclick = () => {
+   get_like();
+}
+
+btn_show_char_sp.onclick = (event) => {
+   event.preventDefault();
+   counts_of_char();
+}
+btn_show_char.onclick = (event) => {
+   event.preventDefault();
+   counts_of_char_no_spaces();
+}
+btn_num_words.onclick = (event) => {
+   event.preventDefault();
+   counts_of_words();
+}
+
+</script>
+</body>
+</html>
