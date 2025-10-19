@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <div id="wraper">
+    <div id="wrapper">
         <div class="logo">
 
         </div>
@@ -41,7 +41,7 @@
     // to retrieve the elements from the DOM.
     // to get the data from the API (star wars characters).
     // to display the info on the DOM: the name, height, gender, birth year, and home world of the character.
-    const wraper = document.getElementById('wraper');
+    const wrapper = document.getElementById('wrapper');
     const name = document.getElementById('name');
     const height = document.getElementById('height');
     const gender = document.getElementById('gender');
@@ -111,7 +111,7 @@ const mainFunction = async (e) => {
 
             } catch(error) {
         console.error(error);
-        wraper.textContent = 'Error data download. Try again'
+        wrapper.textContent = 'Error data download. Try again'
     }
 };
      
