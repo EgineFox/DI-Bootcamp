@@ -1,0 +1,15 @@
+#wrapper{
+   display: flexbox; 
+   flex-direction: column;
+   justify-items: center;
+   align-items: center;
+}
+
+#mainEmoji {
+align-self: center;
+}
+
+#feedback {
+  display: block;
+  color: black;
+}
