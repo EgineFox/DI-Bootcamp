@@ -68,6 +68,9 @@ const submit_btn = document.getElementById('submit');
 const form = document.getElementById('emojiForm');
 const feedback = document.getElementById('feedback');
 
+const nameInput = document.getElementById('playerName');
+
+
 let score = 0;
 let correctAnswer = null;
 
@@ -100,6 +103,13 @@ play_btn.addEventListener('click', () => {
     startRound();
     play_btn.textContent = 'STOP';
     isPlaying = true;
+    nameInput.disabled = true;
+    score = 0;
+    totalGuesses = 0;
+    correctGuesses = 0;
+    wrongGuesses = 0;
+    scoreDisplay.textContent = 'Score: 0';
+
   } else {
     // stop game
     mainEmoji.textContent = '';
@@ -120,6 +130,12 @@ play_btn.addEventListener('click', () => {
       <p>Correct guesses: ${correctGuesses}</p>
       <p>Wrong guesses: ${wrongGuesses}</p>
     `;
+    nameInput.disabled = false;
+     const playerName = nameInput.value.trim();
+    if (playerName) {
+      updateLeaderboard(playerName, score);
+    }
+
   }
 });
 
@@ -131,6 +147,14 @@ submit_btn.addEventListener('click', (event) => {
   event.preventDefault();
 
    console.log('clicked');
+
+const playerName = nameInput.value.trim();
+
+if (!playerName) {
+  feedback.textContent = '⚠️ Please enter your name before submitting.';
+  return;
+}
+
 
 
   const formData = new FormData(form);
