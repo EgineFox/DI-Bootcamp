@@ -2,7 +2,24 @@ const express = require('express');
 const router = express.Router();
 
 // In-memory storage for to-do items
-let todos = [];
+let todos = [
+  {
+    id: 1698321000001,
+    text: "Buy groceries",
+    isDone: false
+  },
+  {
+    id: 1698321000002,
+    text: "Finish homework",
+    isDone: true
+  },
+  {
+    id: 1698321000003,
+    text: "Call the dentist",
+    isDone: false
+  }
+
+];
 
 // GET all to-do items
 router.get('/', (req, res) => {
