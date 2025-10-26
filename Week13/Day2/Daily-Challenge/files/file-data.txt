@@ -1,1 +1,2 @@
-This is the content of file-data.txt for the daily challenge.
+This is some sample text inside the file.
+Node.js makes file operations easy!
