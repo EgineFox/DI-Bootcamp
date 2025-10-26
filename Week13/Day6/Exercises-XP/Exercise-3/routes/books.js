@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-// Sample in-memory database for storing books
+// In-memory storage for books
 const books = [
-    {
+  {
     id: 1,
     title: "To Kill a Mockingbird",
     author: "Harper Lee",
@@ -21,57 +21,82 @@ const books = [
     author: "F. Scott Fitzgerald",
     yearPub: 1925
   }
-
 ];
 
-// Get all books
-router.get('/', (req, res) =>{
-    res.json(books);
-})
+// GET all books
+router.get('/', (req, res) => {
+  res.status(200).json(books);
+});
 
-// Add a new book
-router.post('/', (req, res) =>{
-   const { title, author, yearPub } = req.body;
-   if (!title || !author || !yearPub) {
-       return res.status(400).json({ error: 'Missing required fields' });
-    }
-    const newBook = {id: books.length + 1, title, author, yearPub};
-    books.push(newBook);
-    res.status(201).json(newBook);
-})
+// POST a new book
+router.post('/', (req, res) => {
+  const { title, author, yearPub } = req.body;
 
-// Update a book by ID
-router.put('/:id', (req, res) =>{
-    const id = Number(req.params.id);
-    const index = books.findIndex(b=> b.id === id)
-    const { title, author, yearPub } = req.body;
-    if (!title || !author || !yearPub) {
-        return res.status(400).json({ error: 'Missing required fields' });
-        };
-   const updBook = {
-        id,
-        title: req.body.title,
-        author: req.body.author,
-        yearPub: req.body.yearPub
-    };
-    if (index != -1) {
-        books[index] = updBook;
-        res.status(200).json(updBook);
-    } else {
-        return res.status(404).json({ error: `Book with id ${id} not found` });
-    }
-})
+  if (
+    !title || typeof title !== 'string' ||
+    !author || typeof author !== 'string' ||
+    !yearPub || typeof yearPub !== 'number'
+  ) {
+    return res.status(400).json({ error: 'Fields "title", "author" (string) and "yearPub" (number) are required' });
+  }
 
-// Delete a book by ID
-router.delete('/:id', (req, res) =>{
-    const id = Number(req.params.id);
-    const index = books.findIndex(b=> b.id === id);
-    if (index != -1) {
-    books.splice(index, 1);
-    res.status(200).json({ message: `Book with id ${id} deleted` });
-    } else {
- return res.status(404).json({ error: `Book with id ${id} not found` });
+  const newBook = {
+    id: Date.now(),
+    title,
+    author,
+    yearPub
+  };
+
+  books.push(newBook);
+  res.status(201).json(newBook);
+});
+
+// PUT (partial update) a book by ID
+router.put('/:id', (req, res) => {
+  const id = Number(req.params.id);
+  const index = books.findIndex(book => book.id === id);
+
+  if (index === -1) {
+    return res.status(404).json({ error: `Book with id ${id} not found` });
+  }
+
+  const { title, author, yearPub } = req.body;
+
+  if (title !== undefined) {
+    if (typeof title !== 'string') {
+      return res.status(400).json({ error: 'Field "title" must be a string' });
     }
-})
+    books[index].title = title;
+  }
+
+  if (author !== undefined) {
+    if (typeof author !== 'string') {
+      return res.status(400).json({ error: 'Field "author" must be a string' });
+    }
+    books[index].author = author;
+  }
+
+  if (yearPub !== undefined) {
+    if (typeof yearPub !== 'number') {
+      return res.status(400).json({ error: 'Field "yearPub" must be a number' });
+    }
+    books[index].yearPub = yearPub;
+  }
+
+  res.status(200).json(books[index]);
+});
+
+// DELETE a book by ID
+router.delete('/:id', (req, res) => {
+  const id = Number(req.params.id);
+  const index = books.findIndex(book => book.id === id);
+
+  if (index === -1) {
+    return res.status(404).json({ error: `Book with id ${id} not found` });
+  }
+
+  books.splice(index, 1);
+  res.status(200).json({ message: `Book with id ${id} has been deleted` });
+});
 
 module.exports = router;
