@@ -1,68 +1,68 @@
 const express = require('express');
 const router = express.Router();
-// Sample in-memory database for storing to-do items
-const todos = [];
 
-// Get all to-do items
+// In-memory storage for to-do items
+let todos = [];
+
+// GET all to-do items
 router.get('/', (req, res) => {
-    res.status(200).json(todos);
-})
-// Add a new to-do item
-router.post('/', (req, res) => {
-    const { text, isDone } = req.body;
-    const newTask = {
-        id: todos.length+1,
-        text: req.body.text,
-        isDone: Boolean(isDone)
-    };
-    todos.push(newTask);
-    res.status(201).json(newTask);
-})
+  res.status(200).json(todos);
+});
 
-// Update a to-do item by ID
+// POST a new to-do item
+router.post('/', (req, res) => {
+  const { text, isDone = false } = req.body;
+
+  if (!text || typeof text !== 'string') {
+    return res.status(400).json({ error: 'Field "text" is required and must be a string' });
+  }
+
+  const newTodoItem = {
+    id: Date.now(), // Safer ID generation
+    text,
+    isDone: Boolean(isDone)
+  };
+
+  todos.push(newTodoItem);
+  res.status(201).json(newTodoItem);
+});
+
+// PUT (partial update) a to-do item by ID
 router.put('/:id', (req, res) => {
-    const id = Number(req.params.id);
-    const index = todos.findIndex(t=> t.id ===id);
-    if (index === -1) {
+  const id = Number(req.params.id);
+  const todoIndex = todos.findIndex(item => item.id === id);
+
+  if (todoIndex === -1) {
     return res.status(404).json({ error: `Task with id ${id} not found` });
   }
 
-    const updatedTask = {
-        id: id,
-        text: req.body.text,
-        isDone:  req.body.isDone
-    };
-   
-        todos[index] = updatedTask;
+  const { text, isDone } = req.body;
 
-    res.status(200).json(`Task id =${id} updated`);
-})
-
-// Delete a to-do item by ID
-router.delete('/:id', (req, res) => {
-    const id = Number(req.params.id);
-    const index = todos.findIndex(t=> t.id ===id);
-    
-    if (index === -1) {
-        return res.status(404).json({ error: `Task with id ${id} not found` });
+  if (text !== undefined) {
+    if (typeof text !== 'string') {
+      return res.status(400).json({ error: 'Field "text" must be a string' });
     }
-    todos.splice(index, 1);
-    res.status(200).json({message:`Task id =${id} deleted`});
-})
+    todos[todoIndex].text = text;
+  }
 
-router.use((req, res) => {
-  res.status(404).send(`
-    <h1>404 - Page Not Found</h1>
-    <p>The page you're looking for doesn't exist.</p>
-  `);
+  if (isDone !== undefined) {
+    todos[todoIndex].isDone = Boolean(isDone);
+  }
+
+  res.status(200).json(todos[todoIndex]);
 });
 
-router.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send(`
-    <h1>500 - Internal Server Error</h1>
-    <p>Something went wrong on the server.</p>
-  `);
+// DELETE a to-do item by ID
+router.delete('/:id', (req, res) => {
+  const id = Number(req.params.id);
+  const todoIndex = todos.findIndex(item => item.id === id);
+
+  if (todoIndex === -1) {
+    return res.status(404).json({ error: `Task with id ${id} not found` });
+  }
+
+  todos.splice(todoIndex, 1);
+  res.status(200).json({ message: `Task with id ${id} has been deleted` });
 });
 
 module.exports = router;
