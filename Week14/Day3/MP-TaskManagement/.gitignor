@@ -1,0 +1,4 @@
+/node_models
+package-lock.json
+package.json
+**.env
