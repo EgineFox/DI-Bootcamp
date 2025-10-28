@@ -1,12 +1,11 @@
 import express from 'express';
-
+import db from './config/db.js'; // assuming db.js exports a Knex instance
 import postsRoutes from './routes/postsRoutes.js';
 
 const app = express();
 app.use(express.json()); 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.use(express.json());
 
 // Routes
 app.use('/posts', postsRoutes);

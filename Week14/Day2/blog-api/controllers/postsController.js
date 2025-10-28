@@ -8,8 +8,12 @@ import {
 } from '../models/postModel.js';
 
 export const getPosts = async (req, res, next) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 10;
+  const offset = (page - 1) * limit;
+
   try {
-    const result = await getAllPosts();
+    const result = await getAllPosts(limit, offset); // Update model to accept limit & offset
     res.json(result.rows);
   } catch (err) {
     next(err);
@@ -56,3 +60,25 @@ export const deletePost = async (req, res, next) => {
     next(err);
   }
 };
+
+import { body, validationResult } from 'express-validator';
+
+export const validatePost = [
+  body('title').notEmpty().withMessage('Title is required'),
+  body('content').notEmpty().withMessage('Content is required'),
+  (req, res, next) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+    next();
+  }
+];
+
+import fs from 'fs';
+
+function logError(error) {
+  fs.appendFile('error.log', `${new Date().toISOString()} - ${error.message}\n`, err => {
+    if (err) console.error('Failed to write to log file');
+  });
+}
