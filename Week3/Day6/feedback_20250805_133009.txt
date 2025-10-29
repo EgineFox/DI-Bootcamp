@@ -1,0 +1,8 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week3/Day6/ExercisesXPJSON.py
+suggestions for improvement:
+- In `get_random_sentence`, handle the case where the word list might be empty more robustly.  Returning a message is fine, but consider raising an exception or using a default word list instead for better error management. 
+- Improve input validation in the main function. While it checks for integer type and range, it doesn't handle non-numeric input gracefully. Consider using a while loop to repeatedly ask the user for input until a valid integer within the range is provided.
+- Add comments to explain the purpose of each section in the JSON exercise.
+- The file path in Exercise 1 is hardcoded. It's better to make it configurable, either through a command-line argument or a configuration file.
+Correctness: 95%
+-----
