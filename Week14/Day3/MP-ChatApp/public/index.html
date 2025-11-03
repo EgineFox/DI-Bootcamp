@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Real-time Chat</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <!-- Login Section -->
+  <div id="login-container">
+    <h2>Enter your username</h2>
+    <form id="login-form">
+      <input id="username" placeholder="Username" required />
+      <label for="room">Choose a room:</label>
+      <select id="room">
+        <option value="general">General</option>
+        <option value="tech">Tech</option>
+        <option value="music">Music</option>
+      </select>
+      <button type="submit">Join Chat</button>
+    </form>
+  </div>
+
+  <!-- Chat Section -->
+  <div id="chat-container" style="display: none;">
+    <div id="room-name" style="font-weight: bold; margin-bottom: 10px;"></div>
+
+    <div id="chat-area">
+      <ul id="messages"></ul>
+      <form id="form">
+        <input id="input" autocomplete="off" placeholder="Type a message..." />
+        <button id="sendBtn">Send</button>
+      </form>
+    </div>
+
+    <div id="sidebar">
+      <h3>Active Users</h3>
+      <ul id="user-list"></ul>
+    </div>
+
+    <button id="leave-room">Leave Room</button>
+  </div>
+
+  <!-- Room List Section -->
+  <div id="room-section">
+    <h3>Available Rooms</h3>
+    <button id="refresh-rooms">Refresh Rooms</button>
+    <button id="refresh-users">Refresh Users</button>
+    <ul id="room-list"></ul>
+  </div>
+
+  <!-- Private Message Modal -->
+  <div id="private-notifications"></div>
+
+  <div id="private-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h3>Private Message</h3>
+      <div id="private-message-content"></div>
+    </div>
+  </div>
+
+  <form id="avatar-form">
+  <label for="avatar">Upload profile picture:</label>
+  <input type="file" id="avatar" accept="image/*" />
+  <button type="submit">Save</button>
+</form>
+<img id="profile-preview" src="" alt="Profile Preview" style="display:none; width:100px;" />
+
+  <script src="main.js"></script>
+</body>
+</html>

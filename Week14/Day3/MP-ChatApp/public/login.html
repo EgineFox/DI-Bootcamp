@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io/js"></script>
+    <script src="login.js" defer> </script>
+    <title>Login</title>
+</head>
+<body>
+    <div id="login-container">
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required />
+            <select name="" id="room">
+                <option value="general">General</option>
+                <option value="tech">Tech</option>
+                <option value="music">Music</option>
+            </select>
+            <button type="submit">Join Chat</button>
+        </form>
+    </div>
+</body>
+</html>
