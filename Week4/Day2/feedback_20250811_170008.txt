@@ -1,0 +1,7 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week4/Day2/Daily-challenge-OOP-Quizz.py
+suggestions for improvement:
+- The class name `Desk` should be `Deck`. This is a minor typographical error but it impacts readability and understanding.
+- The `show` method in the `Deck` class iterates through the `cards` list and calls the `show` method of each `Card` object.  This is correct but could be improved for clarity. Consider adding a print statement to indicate which card is being shown.
+- Add error handling for the case where the deck is empty when calling `deal()`. Currently, `pop()` will throw an exception.
+Correctness: 80%
+-----
