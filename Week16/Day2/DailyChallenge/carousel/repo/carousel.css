@@ -1,0 +1,8 @@
+.carousel-wrapper {
+    display: flexbox;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+    align-items: center;
+}
