@@ -9,19 +9,19 @@ class DemoCarousel extends Component {
     return (
       <Carousel className='carousel-wrapper'>
   <div>
-    <img src="/hongkong.jpg" alt="Legend 1" />
+    <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_480,h_384/cities/jrfyzvgzvhs1iylduuhj.jpg" alt="Legend 1" />
     <p className="legend">Hong Kong</p>
   </div>
   <div>
-    <img src="/japan.webp" alt="Legend 2" />
+    <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_480,h_384/cities/c1cklkyp6ms02tougufx.webp" alt="Legend 2" />
     <p className="legend">Macao</p>
   </div>
   <div>
-    <img src="/lasvegas.webp" alt="Legend 3" />
-    <p className="legend">japan</p>
+    <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_480,h_384/cities/e8fnw35p6zgusq218foj.webp" alt="Legend 3" />
+    <p className="legend">Japan</p>
   </div>
   <div>
-    <img src="/makao.webp" alt="Legend 4" />
+    <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/c_fill,w_480,h_384/cities/liw377az16sxmp9a6ylg.webp" alt="Legend 4" />
     <p className="legend">Las Vagas</p>
   </div>
 </Carousel>
