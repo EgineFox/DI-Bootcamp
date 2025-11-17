@@ -1,0 +1,25 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/DailyChallenge/carousel/repo/App.js
+suggestions for improvement:
+- Consider adding a title or brief description to the app component to enhance its purpose within the larger application.
+- Ensure the Carousel component is modular and reusable for other parts of the application to maintain code efficiency and reduce redundancy.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/DailyChallenge/carousel/repo/Carousel.js
+suggestions for improvement:
+- Use the provided URLs directly instead of referencing local files. This is crucial for the application to work as intended without requiring specific local file setups.
+- The legends for the images are mismatched; correct them to correspond to the correct city for each image.
+- Consider using a more modern React approach with functional components and hooks instead of class components for improved readability and maintainability.
+Correctness: 60%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/DailyChallenge/carousel/repo/carousel.css
+suggestions for improvement:
+- The submission should include the react code that implements the carousel using react-responsive-carousel package, imports, and the provided image links. The current code is just css code.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/DailyChallenge/carousel/repo/index.css
+suggestions for improvement:
+- The provided code snippet is CSS, while the challenge explicitly asks for a React component implementing a carousel using the 'react-responsive-carousel' package.  The CSS is unrelated to building the React carousel.
+- The challenge specifies using React components, JSX, and potentially Bootstrap (although Bootstrap isn't strictly required for functionality, only styling). The provided CSS does not use or demonstrate any of these concepts.
+- The code doesn't address the core requirement of creating a React carousel component as outlined in the problem description.
+Correctness: 0%
+-----

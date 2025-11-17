@@ -1,0 +1,22 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/repo/App.js
+suggestions for improvement:
+- Consider using more descriptive variable names where appropriate.
+- The use of ids (e.g., 'exercise1.1') in the return statement is not necessary and can be removed, as they don't contribute to the functionality outlined in the instructions.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/repo/Exercise3.js
+suggestions for improvement:
+- Consider moving the `style_header` object outside the render method to avoid re-creation on every render.
+- For the image src, if the logo is a static asset, import it to the file instead of referencing it from the public folder, this can improve performance.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/repo/UserFavoriteAnimals.js
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/repo/index.css
+suggestions for improvement:
+- The provided code is a CSS file and does not address any of the React exercises described in the chapter content. The exercises involve creating React components, using JSX, styling components, and passing props. This CSS file provides general styling for the body and code elements, which is unrelated to the specific tasks in the provided content.
+Correctness: 0%
+-----
