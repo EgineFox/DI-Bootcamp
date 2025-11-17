@@ -9,7 +9,7 @@ export default class Example2 extends Component {
     }
 
     componentDidMount() {
-        fetch('../data-ex3.json')
+        fetch('../data.json')
             .then((response) => response.json())
             .then((jsonData) => {
                 this.setState({ data: jsonData });
