@@ -1,0 +1,12 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week4/Day2/Daily-challenge-OOP-Quizz.py
+suggestions for improvement:
+- The quiz answers are good but could benefit from more concise and precise language. For example, the answer for 'What is a class?' could be simply: 'A class is a blueprint for creating objects.'
+- The `Deck` class correctly implements the `shuffle` and `deal` methods as specified.  However, the `shuffle` method could be improved by using `random.shuffle` for better efficiency and readability.
+- Add error handling to the `deal` method.  What happens if the deck is empty?
+- The Card class has a `show` method, which is not explicitly required by the instructions. While not harmful, it is extra functionality.
+Brief justification:
+- correctness: The code largely fulfills the requirements. The `Deck` class creates a deck of 52 cards, shuffles them using a Fisher-Yates shuffle (although a more concise implementation exists), and deals cards correctly. The quiz answers accurately define the OOP concepts, though they could be more concise. The score is reduced slightly due to the lack of error handling in the `deal` method and the unrequired `show` method in the `Card` class.
+- readability: The code is well-structured and relatively easy to understand.  The comments are helpful. However, using `random.shuffle` would make the `shuffle` method more concise and readable.  The naming `desk` instead of `deck` is a minor readability issue.
+- performance: The shuffle algorithm used is a correct implementation of the Fisher-Yates shuffle (in-place shuffle). While functional, `random.shuffle` is generally more efficient and more readable. The `deal` method uses `pop()`, which is an O(1) operation in most cases and thus efficient.
+- security: There are no apparent security vulnerabilities in the code. The code only deals with the creation and manipulation of a deck of cards; it doesn't involve any external data or network operations that would pose security risks.
+
