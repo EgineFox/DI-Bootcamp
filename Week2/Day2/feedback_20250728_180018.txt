@@ -1,0 +1,14 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week2/Day2/ExercisesXP.py
+suggestions for improvement:
+- In `describe_city`, the phrasing could be improved to match the expected output more closely.  Instead of "The {city} is in the {country}", use "{city} is in {country}".
+- The `make_great` function in Exercise 6 creates a *new* list instead of modifying the original list in place, as instructed. The instructions explicitly stated to modify the original list.
+- Exercise 6: The `show_magicians` function is not used after modifying the list with `make_great`. It should be called again to display the updated list.
+- Add docstrings to functions for better readability and understanding.  For example, what does the function `compare_random` do and how does it handle user input validation (i.e., non-numeric input)?
+- In Exercise 7, the prompt asks for advice based on temperature ranges. The code correctly provides advice, but could be made more concise.  Consider using a single `if/elif/else` structure rather than multiple independent `if` statements.
+- In Exercise 7, the month input validation could be improved (e.g. by using a while loop to continuously prompt for valid input until a valid month is provided).
+Brief justification:
+- correctness: The code correctly implements the core functionality of most exercises, addressing the key Python topics mentioned in the chapter content. However, some exercises deviate from the specific instructions regarding list modification and output formatting. The overall approach and implementation align reasonably well with the chapter’s focus on functions, parameters, conditional statements, and the use of the `random` module. The score is reduced due to the discrepancies noted above.
+- readability: The code is generally readable, with some minor issues. Function names are mostly descriptive, but some docstrings and comments would improve understanding.  The structure is mostly clear, but consolidating some conditional logic (in Exercise 7) would increase readability.
+- performance: The code's performance is efficient. There are no obvious performance bottlenecks in the provided solutions.
+- security: The code does not present any apparent security vulnerabilities.  The only user interaction involves inputting a number (in Exercise 4 and Exercise 7); no external data is processed.
+
