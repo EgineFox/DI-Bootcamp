@@ -1,0 +1,6 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day4/DailyChallenge/vite-project/Repo/App.jsx
+suggestions for improvement:
+- Consider extracting the language item into a separate component for better organization and reusability, especially if you plan to add more features to each language item.
+- The key in the map function could be improved. If the `name` property is unique, using that will make the code more robust to changes that may occur in the array.
+Correctness: 100%
+-----
