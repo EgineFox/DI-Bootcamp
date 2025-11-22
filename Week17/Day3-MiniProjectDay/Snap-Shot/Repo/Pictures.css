@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+    background-color: #f9f9f9;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-y: auto;
+
+
+}
+
+.headerPicture {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+
+.picBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.picBox img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.picBox img:hover {
+    transform: scale(1.03);
+}
+
+.mainLogo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px;
+}
+.mainLogo > img {
+    width: 500px;
+}
+
