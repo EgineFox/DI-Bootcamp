@@ -1,0 +1,13 @@
+.formval {
+    display: inline-block;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    
+}
+.formval input, 
+.formval label {
+    display: block;
+    margin: 10px;
+    justify-content: left;
+}

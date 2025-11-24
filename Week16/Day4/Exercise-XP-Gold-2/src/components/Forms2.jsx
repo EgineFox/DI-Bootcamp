@@ -53,6 +53,7 @@ export default function Forms2() {
             PhoneNumber: '',
             EmailAddress: ''
         });
+        setMessage('');
         setSubmitted(false);
 
     }
@@ -74,7 +75,7 @@ export default function Forms2() {
 
 
                     <form className='forms2' onSubmit={sendData}>
-                        <h1>Wellcome!</h1> <br />
+                        <h1>Welcome!</h1> <br />
                         <h3>{message}</h3>
                         <h3>Please provide your information below.</h3>
                         <input type="text"
