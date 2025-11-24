@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  gap: 10px;
+}
+
+
+.forms input,
+.forms button  {
+  display: inline-block;
+  margin: 5px;
+  }
+.forms2 input,
+.forms2 button  {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+  }
+
+.forms2 {
+ background-color: gray;
+ margin: 50px;
+ padding: 50px;
+ border-radius: 50px;
+ display: block;
+ justify-content: center;
+ text-align: center;
+}

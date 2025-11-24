@@ -1,0 +1,12 @@
+*{
+margin: 20px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;   /* элементы идут в столбик */
+  justify-content: center;  /* центрируем по вертикали */
+  align-items: center;      /* центрируем по горизонтали */
+  text-align: center;       /* текст внутри элементов по центру */
+  min-height: 100vh;        /* чтобы занимало всю высоту экрана */
+}
