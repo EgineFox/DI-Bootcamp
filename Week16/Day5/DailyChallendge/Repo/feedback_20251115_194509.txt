@@ -1,0 +1,12 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day5/DailyChallendge/Repo/App.css
+suggestions for improvement:
+- The provided code is CSS, not React code. It doesn't address the challenge requirements related to JSX, components, React State, or forms.
+- The code needs to be a React component that handles form input and submission, as described in the instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day5/DailyChallendge/Repo/Form.jsx
+suggestions for improvement:
+- Consider using more descriptive class names for better maintainability.
+- The component could be further broken down into smaller, more manageable pieces if it grows significantly.
+Correctness: 100%
+-----
