@@ -1,0 +1,51 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day4/TaskApi/app.js
+suggestions for improvement:
+- Consider adding more robust error handling for file read/write operations as specified in the instructions.  Specifically, the base `app.js` file currently lacks specific error handling related to the `users.json` file.
+- While the code uses express.json(), adding a specific validator or sanitizer middleware could increase the application's resistance to potential injection attacks, especially in routes where user input is processed.
+- The code currently lacks implementation for updating user information via `PUT /users/:id`, which is part of the instructions.
+Correctness: 80%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day4/TaskApi/controllers/userController.js
+suggestions for improvement:
+- Implement proper error handling with status codes and informative messages instead of just sending strings like 'error1' or 'register'.
+- Consider using a more robust validation library (e.g., express-validator) to validate user input.
+- The `deleteUser` function has unnecessary file reading before parsing to JSON, refactor the code to maintain consistency with other functions using `readUsers()` and `writeUsers()`.
+- Password validation at the time of registration is missing.
+Correctness: 90%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day4/TaskApi/models/users.json
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day4/TaskApi/public/index.html
+suggestions for improvement:
+- The provided code only creates a basic HTML page with links to login and register forms. It does not implement any of the backend API functionality required by the chapter content, such as setting up an Express.js application, implementing routes for registration and login, hashing passwords with bcrypt, or storing user data in a JSON file.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day4/TaskApi/public/login-form.html
+suggestions for improvement:
+- The HTML form for login is created as requested. However, the backend Express.js logic that handles the `/register`, `/login`, `/users` routes, user data storage in `users.json`, bcrypt password hashing, and error handling are all missing.
+- Consider separating the JavaScript code into a separate file for better organization.
+- The code lacks proper error handling for the API call (e.g., checking the response status before processing the text).
+- The code should implement validation on the client-side to check if the username and password meet certain criteria before sending the request.
+Correctness: 60%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day4/TaskApi/public/register-form.html
+suggestions for improvement:
+- The provided code only includes the HTML and client-side JavaScript for the registration form. It lacks the Express.js backend implementation for handling the `/register` route, user data storage (users.json), bcrypt password hashing, login functionality, and the other API endpoints as specified in the instructions.
+- The security score is low since the HTML form submits the data without proper validation. The password should be validated on the client side for length and complexity before sending to the server. The client-side validation is very basic, just checking if the fields are empty.
+- The `fetch` call in the JavaScript assumes that the API endpoint is `/api/register`. This endpoint and the corresponding backend logic are missing.
+- Consider adding error handling to the `fetch` call to gracefully handle network errors or server-side issues.
+- The code is missing the implementation for the login form and its associated functionality.
+Correctness: 60%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day4/TaskApi/routes/userRoutes.js
+suggestions for improvement:
+- Implement user deletion route: The provided code includes a `deleteUser` function call in the router but the problem description does not ask for a DELETE route. It is not wrong to include it but it is extra work.
+- Implement the userController functions: The code defines the routes but depends on `userController` which is not provided. To fully address the problem, implement the functions in `userController.js` that handle registration, login, getting users, and updating users, including bcrypt password hashing and JSON file storage logic.
+- Add error handling: The routes should include error handling for file read/write operations, route validation, and incorrect login credentials.
+- Implement input validation: Add input validation to the register and login routes to ensure that the username and password meet certain criteria (e.g., minimum length, no special characters).
+- Consider authentication middleware: While not explicitly required, consider adding authentication middleware to protect the `/users` and `/users/:id` routes.
+Correctness: 70%
+-----

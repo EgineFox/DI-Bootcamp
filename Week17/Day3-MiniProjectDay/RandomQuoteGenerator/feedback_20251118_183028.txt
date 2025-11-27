@@ -1,0 +1,57 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/RandomQuoteGenerator/eslint.config.js
+suggestions for improvement:
+- This code configures ESLint, which is a good practice for React projects but not directly related to the Random Quote Generator project's core functionality (displaying quotes, authors, and changing background colors).
+- Consider adding ESLint configuration directly to the React project related to the quote generator.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/RandomQuoteGenerator/index.html
+suggestions for improvement:
+- The provided code is a basic HTML structure, likely the entry point for a React application created with Vite. It doesn't implement any of the requirements of the 'Random Quote Generator' project, such as displaying quotes, authors, generating new quotes on button click, or changing background/text colors.  It's missing the React components and logic to fulfill the project's instructions.
+- The project requires the use of React, React state, React components, and event handlers.  The provided code only sets up the basic HTML structure for a React application.  The actual React components and logic are missing.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/RandomQuoteGenerator/src/App.css
+suggestions for improvement:
+- The provided code snippet is CSS, while the instructions describe building a React application.  Therefore, the code does not address the problem.
+- The CSS provided appears to be boilerplate CSS often found in React projects, but it is not specific to the quote generator application described in the prompt.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/RandomQuoteGenerator/src/App.jsx
+suggestions for improvement:
+- Consider adding comments to explain the purpose of each component and function, especially within the Quotes component.
+- While not strictly necessary for this project's size, using a state management library (like Redux or Context API) could be beneficial for larger applications with more complex state interactions.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/RandomQuoteGenerator/src/components/Quotes.jsx
+suggestions for improvement:
+- Consider using a state variable to hold the background color instead of directly manipulating the DOM with `document.querySelector`. This is more in line with React's principles.
+- The `autor` id is misspelled; consider correcting it to `author` for better readability and consistency.
+- Consider storing the quotes in state using `useState` instead of importing it directly to allow future changes in the quote database.
+- The instruction says: **Make sure to not display the same quote twice** which you didn't implement.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/RandomQuoteGenerator/src/data/QuotesDatabase.js
+suggestions for improvement:
+- This code only provides the data (quotes array). It does not include the React components, state management, event handling, or styling as requested in the problem. There is no implementation of the random quote generation or color changing functionality.
+- Consider including a `.jsx` file that implements React components using the data to display quotes. The .jsx file should contain React code.
+Correctness: 10.0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/RandomQuoteGenerator/src/index.css
+suggestions for improvement:
+- This code only contains CSS styles. There is no javascript/React code related to the instructions.
+- The instructions clearly state the project should be built with React and implement React state and components.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/RandomQuoteGenerator/src/main.jsx
+suggestions for improvement:
+- The provided code is a standard React entry point and doesn't implement any of the features described in the instructions (quote generation, dynamic background color, etc.).
+- The code only renders the App component but doesn't define what the App component does, so it doesn't address the problem.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/RandomQuoteGenerator/vite.config.js
+suggestions for improvement:
+- The provided code is a Vite configuration file, which is unrelated to the React quote generator project described in the chapter content.
+- The React quote generator should include React components, state management, and event handling to display quotes and update them dynamically.
+- The Vite configuration file is responsible for bundling the application and serving it during development. It does not directly implement any of the project requirements.
+Correctness: 0%
+-----

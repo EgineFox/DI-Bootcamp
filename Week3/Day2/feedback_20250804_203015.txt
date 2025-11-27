@@ -1,0 +1,22 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week3/Day2/Daily-Challenge-Pagination.py
+suggestions for improvement:
+- The provided code implements a pagination class, which is not directly related to the chapter content focusing on inheritance, class methods, polymorphism, exceptions, and the `super()` function.  The code is well-structured and functional, but it's irrelevant to the chapter's learning objectives.
+- Consider refactoring the code to address the actual exercises provided in the chapter.  For example, implement the `Pets`, `Cat`, `Siamese`, `Dog`, and `PetDog` classes, demonstrating inheritance and polymorphism.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP.py
+suggestions for improvement:
+- In Exercise 1, the `Pets` class is defined twice.  Remove the redundant definition.
+- In Exercise 2, the `bark()` method in the `Dog` class should return a string instead of printing directly. This allows for better flexibility in how the bark is used.
+- In Exercise 2, the `fight` method could be improved by handling potential errors, such as if `other_dog` is not a `Dog` instance.  Add a check for this type of error.
+- Exercise 3: The `PetDog` class is good but it can be enhanced with a docstring explaining the purpose and usage of the class.
+Correctness: 95%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXPJSON.py
+suggestions for improvement:
+- The code does not address any of the exercises from the chapter content. It performs unrelated tasks: generating random sentences from a text file and manipulating a JSON string.  The exercises in the chapter focus on Python classes, inheritance, polymorphism, and exception handling, none of which are present in this code.
+- The random sentence generator could benefit from error handling for empty word lists and non-existent files.  The input validation is good but could be more robust.
+- The JSON manipulation code is straightforward and efficient. The use of `json.dump` with `indent` improves readability of the output JSON file.
+- Consider adding comments to explain the purpose of each function and step within the random sentence generator.
+Correctness: 0%
+-----
