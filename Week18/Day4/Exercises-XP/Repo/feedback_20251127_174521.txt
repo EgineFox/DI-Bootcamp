@@ -1,0 +1,45 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/Exercises-XP/Repo/Exercise1/App.css
+suggestions for improvement:
+- The provided code is CSS and does not implement the requested React components with the specified hooks (useContext, useState, useRef, useReducer).
+- The code only provides styling for light and dark themes, but it doesn't include any React components or logic to switch between themes or implement the character counter or todo list functionalities.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/Exercises-XP/Repo/Exercise1/App.jsx
+suggestions for improvement:
+- The provided code snippets do not fully implement any of the exercises. The `App.js` uses a ThemeProvider and ThemeSwitcher, but the implementation of ThemeSwitcher and related context is missing. The code for CharacterCounter and TodoList are also incomplete. Therefore, no exercise is properly addressed.
+- Provide complete and runnable code for each exercise to allow for a proper evaluation.
+Correctness: 0.0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/Exercises-XP/Repo/Exercise1/ThemeSwitcher.jsx
+suggestions for improvement:
+- Consider adding comments to explain complex logic or calculations within the `toggleTheme` function, though in this case it is quite simple.
+- For improved organization, you could separate the context creation, provider, custom hook, and theme switcher into different files. This might be overkill for a simple example, but beneficial for larger projects.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/Exercises-XP/Repo/Exercise1/index.css
+suggestions for improvement:
+- The code provided is a CSS stylesheet, not a React component implementation. It does not address the instructions for either Exercise 1 (Theme Switcher), Exercise 2 (Character Counter), or Exercise 3 (Todo List) which all require React components utilizing specific hooks.
+- The CSS stylesheet defines styling for light and dark color schemes, but it does not implement the dynamic theme switching functionality using React's `useContext` and `useState` as required by Exercise 1.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/Exercises-XP/Repo/Exercise1/main.jsx
+suggestions for improvement:
+- The provided code is a basic React entry point, setting up the root and rendering the App component. This does not address any of the specific exercises outlined in the instructions (Theme Switcher, Character Counter, or Todo List).
+- To address the exercises, you would need to implement the components and logic as described in each exercise's instructions and starter code.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/Exercises-XP/Repo/Exercise2/App.css
+suggestions for improvement:
+- The submitted code is CSS styling and not a React component implementation. The exercises require implementing React components using hooks and context. The CSS provided does not address any of the exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/Exercises-XP/Repo/Exercise2/App.jsx
+suggestions for improvement:
+- The App.js only renders the CharacterCounter component, the code for which is not provided.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/Exercises-XP/Repo/Exercise2/CharacterCounter.jsx
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
