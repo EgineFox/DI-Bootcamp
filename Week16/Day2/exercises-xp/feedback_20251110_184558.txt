@@ -1,0 +1,72 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/public/index.html
+suggestions for improvement:
+- The provided code is the default `index.html` file for a React application, not the React components (`App.js`, `UserFavoriteAnimals.js`, `Exercise3.js`) that the exercises require to be created and modified. Therefore, it doesn't address any of the specific instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/public/manifest.json
+suggestions for improvement:
+- The provided code is a manifest file, likely for a Progressive Web App (PWA). This is not related to the React exercises described in the Chapter Content/Questions, which focus on JSX, styling, and component creation.
+- The code does not address any of the instructions for Exercises 1, 2, or 3.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/public/robots.txt
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/src/App.css
+suggestions for improvement:
+- The provided code is CSS styling for the App component, not React code demonstrating JSX or component creation as described in the exercises.
+- The code doesn't address any of the specific instructions from the exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/src/App.js
+suggestions for improvement:
+- Consider extracting JSX blocks into separate components for improved readability, especially as the component grows.
+- Use more descriptive IDs for elements, if IDs are necessary at all.  For example, `exercise1.1` isn't very informative.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/src/App.test.js
+suggestions for improvement:
+- The provided code is a test file and does not address any of the exercises listed in the prompt.
+- The file has no relation to react components, JSX, and styling in react described in the content.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/src/Exercise.css
+suggestions for improvement:
+- This CSS snippet should be incorporated into the `Exercise.css` file created as part of exercise 3. Ensure the styles are correctly applied to the paragraph element in your React component.
+- Ensure you've created the `Exercise3.js` file with the React component as described in the instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/src/Exercise3.js
+suggestions for improvement:
+- Consider moving the inline style for the main div to a CSS class for better organization.
+- While not strictly required, using more descriptive alt text for the image would improve accessibility.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/src/UserFavoriteAnimals.js
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/src/index.css
+suggestions for improvement:
+- The provided code is a CSS file and is not relevant to the React exercises described in the chapter content. The exercises focus on creating React components, using JSX, and styling them using inline styles and CSS files. Therefore, the provided code does not address any of the instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/src/index.js
+suggestions for improvement:
+- The provided code is the default `index.js` file created by `create-react-app`. It doesn't implement any of the exercises described in the chapter content.
+- The code should implement the instructions from Exercise 1, Exercise 2 and Exercise 3.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/src/reportWebVitals.js
+suggestions for improvement:
+- This code is completely unrelated to the React exercises described in the chapter content. It appears to be related to web vitals reporting, which is not mentioned or required in the instructions.
+Correctness: 0.0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/exercises-xp/src/setupTests.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----

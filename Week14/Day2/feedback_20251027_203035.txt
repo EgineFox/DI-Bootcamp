@@ -1,0 +1,71 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day2/blog-api/config/db.js
+suggestions for improvement:
+- This code only configures the database connection. It does not build the RESTful API or implement any of the required routes (GET, POST, PUT, DELETE) for the blog or book API, as outlined in the exercises.
+- The code only handles database connection setup but the exercise asks for routes to Create, Read, Update, and Delete blog posts and books.
+- The code doesn't have any Express app setup or route definitions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day2/blog-api/controllers/postsController.js
+suggestions for improvement:
+- Consider adding validation middleware to sanitize and validate the request body, preventing potential injection attacks.
+- Implement more robust error handling, such as logging errors to a file or external service for debugging purposes.
+- Add pagination to the `getPosts` endpoint to improve performance when dealing with a large number of posts.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day2/blog-api/models/postModel.js
+suggestions for improvement:
+- The provided code snippet focuses only on the model layer (database interactions), as evidenced by the SQL queries. It lacks the necessary Express.js code to create the API routes (GET, POST, PUT, DELETE) as specified in Exercise 1 and Exercise 2.
+- The code only defines the database query functions, but it does not implement the API endpoints or the server setup required to run the application, as specified in the instructions for both exercises.
+- Consider adding input validation and sanitization to prevent SQL injection vulnerabilities. Specifically, when accepting `title` and `content` from user input.
+- The module export could be simplified by directly exporting the functions instead of creating an intermediate object.
+Correctness: 50%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day2/blog-api/routes/postsRoutes.js
+suggestions for improvement:
+- This code snippet only shows the routes definition. To have a fully functional API, the controllers and models interacting with the database need to be implemented.
+- Implement error handling within the controller functions (postsController.js) to catch potential database errors or invalid inputs and send appropriate error responses to the client.
+- Consider using a middleware for request validation to ensure that incoming data (e.g., for creating or updating posts) is valid before processing it in the controller.
+Correctness: 60%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day2/blog-api/server.js
+suggestions for improvement:
+- Need to implement Knex to query data from a database as specified in the Chapter Content.
+- The code includes the basic setup for an Express API, handling routes and error handling, it should include config, controllers, and models.
+- Consider separating route definitions into a separate file for better organization. Also implement CRUD operations on '/posts'.
+Correctness: 60%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day2/book-api/app.js
+suggestions for improvement:
+- The code only shows the `app.js` or `server.js` file. It does not implement the routes, controllers, models, and configurations as requested in the exercise instructions.
+- The code lacks the database connection setup using Knex, which is a core requirement of the exercises.
+- The CRUD operations for books are not implemented.
+Correctness: 50%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day2/book-api/config/db.js
+suggestions for improvement:
+- This code only sets up a database connection using `pg` and environment variables. It does not implement any of the API endpoints or directory structure as requested in the exercises. It does not relate to building a RESTful API or CRUD API.
+- The code should include the express app, routes, models, and controllers to align with the exercise instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day2/book-api/controllers/booksController.js
+suggestions for improvement:
+- The code snippet does not show the Express app setup, routing, or database connection initialization, making it incomplete. Showing the import statements from models folder, indicating using of database, but the database connection and setup using Knex aren't shown.
+- The code handles retrieving all books, getting a book by ID, and creating a book, but it's missing the 'Update' and 'Delete' functionalities specified in the exercises.
+- Error handling is implemented using a `next(err)` pattern, but it's unclear how the error handling middleware is set up in the main `app.js` file, which would be crucial for centralizing error responses.
+- The `published_year` property in `createBook` uses snake_case, but the rest of the code uses camelCase. Consider standardizing the naming convention for consistency.
+Correctness: 50%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day2/book-api/models/booksModel.js
+suggestions for improvement:
+- The code snippet only shows the model logic but not the API setup using Express, which is a core requirement of the exercises. Ensure the code includes the Express route definitions and the overall server setup.
+- Consider adding error handling to the database queries to handle potential failures gracefully.
+- Use more descriptive variable names in the `insertBook` function for better readability (e.g., `publishedYear` instead of `published_year`).
+Correctness: 60%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week14/Day2/book-api/routes/booksRoutes.js
+suggestions for improvement:
+- The code snippet only shows the routes and imports. It's missing the implementation of the controllers (getAllBooks, getBookById, createBook), models, database connection setup, and the app.js file which are crucial parts of the exercises.
+- The provided code only implements GET all, GET by ID and POST routes. It should also implement PUT (update) and DELETE routes to fulfill the CRUD requirements.
+- Consider adding error handling within the controller functions (e.g., try-catch blocks) to gracefully handle potential errors during database interactions or data processing.
+Correctness: 50%
+-----

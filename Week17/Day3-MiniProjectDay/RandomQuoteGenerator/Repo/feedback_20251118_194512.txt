@@ -1,0 +1,13 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/RandomQuoteGenerator/Repo/App.jsx
+suggestions for improvement:
+- Consider adding comments to explain the purpose of the components and functions, especially for more complex applications.
+- While this code is simple, consider future scalability and how state management might evolve as the application grows.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/RandomQuoteGenerator/Repo/Quotes.jsx
+suggestions for improvement:
+- Consider moving the color changing logic into a separate function or custom hook for better reusability and separation of concerns.
+- The 'do...while' loop in 'showRandomQuote' ensures that the same quote is not displayed twice in succession. While functional, consider an alternative that is efficient and readable if the dataset is very large.
+- Although functional, directly manipulating the DOM with `document.querySelector` is not the React way. Instead, manage styles through React state and CSS classes.  For the background color, using React's state management (`bgColor` and `setBgColor`) and applying it to a parent `div` is the recommended approach.
+Correctness: 100%
+-----
