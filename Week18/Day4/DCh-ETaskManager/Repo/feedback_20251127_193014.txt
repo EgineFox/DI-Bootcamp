@@ -1,0 +1,18 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/DCh-ETaskManager/Repo/TaskFilter.jsx
+suggestions for improvement:
+- While this component correctly implements task filtering, it only addresses one part of the instructions. It lacks the task editing functionality.
+- Consider adding the `EDIT_TASK` action to the reducer (which is only alluded to, not shown in the code snippet).
+- Show how useRef is used to manage the editing state and update task text in the Task component itself.
+Correctness: 70%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/DCh-ETaskManager/Repo/TaskItem.jsx
+suggestions for improvement:
+- Consider adding a filter component outside the task item for filtering tasks to follow instructions more closely.
+- The instructions mention filtering tasks by completion status. Ensure you have a mechanism in place to trigger and handle the filter action in the reducer and component.
+Correctness: 90%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/DCh-ETaskManager/Repo/TaskProvider.jsx
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----

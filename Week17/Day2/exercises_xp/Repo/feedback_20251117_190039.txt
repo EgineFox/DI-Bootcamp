@@ -1,0 +1,65 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/App.jsx
+suggestions for improvement:
+- Consider extracting the `fetchDataEx4` function to a separate file or custom hook to improve component organization, especially if it grows in complexity.
+- The `NavLink` components could be enhanced with `activeClassName` to visually indicate the currently active route.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/ErrorBoundary.jsx
+suggestions for improvement:
+- Consider adding more specific error messages or fallback UI in the render method for a better user experience.
+- The component could be enhanced by logging errors to a server for monitoring purposes in a production environment.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/Example-1.jsx
+suggestions for improvement:
+- The provided code seems to be for Exercise 3, but the instructions specify that Exercise 4 requires an `async await` function to `fetch` the json data from the URL using a `POST` method, setting headers, and sending hardcoded JSON data. The current code fetches a local JSON file, which is not what Exercise 4 asks for.
+- The component should send a POST request to a URL, not fetch a local file. Use `fetch` with the `method` option set to 'POST' and include appropriate headers.
+- The provided code focuses on displaying data, rather than sending it.  The core task is missing: sending JSON data to a webhook URL.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/Example-2.jsx
+suggestions for improvement:
+- The provided code does not relate to the content in the chapter. The chapter focuses on React Router, Error Boundaries and JSON. No parts of the code implements functionality requested in the chapter.
+- Consider to address each exercise independently in different files.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/Example-3.jsx
+suggestions for improvement:
+- The code does not implement the functionality for the exercises in the chapter. It only implements Example3 from Exercise 3, and does not include the implementation of the other exercises.
+- The chapter content provides exercises that cover React State, Event handlers, React Router, Error Boundary, and JSON. This code only covers the JSON parsing portion of the exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/HomeScreen.jsx
+suggestions for improvement:
+- This code snippet only includes the Home component and does not address any of the exercises outlined in the chapter content.  It needs to implement the ErrorBoundary, React Router setup, all three screen components (HomeScreen, ProfileScreen, ShopScreen), JSON data display, and POST request functionality as detailed in Exercises 1-4.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/PostList.jsx
+suggestions for improvement:
+- Ensure that the component is rendered in App.js as indicated in the instructions.
+- Consider adding error handling in case the JSON data is malformed or the file is not found.
+- Use more descriptive variable names if necessary to improve readability further.
+Correctness: 50%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/ProfileScreen.jsx
+suggestions for improvement:
+- The code provides a Profile component but does not address the broader requirements of Exercise 1 involving ErrorBoundary, React Router setup with multiple routes, or the ShopScreen component that throws an error. It also doesn't handle the JSON data display as outlined in Exercise 2 and 3. Therefore, it doesn't align with the overall objectives of the exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/ShopScreen.jsx
+suggestions for improvement:
+- This code snippet only addresses part of Exercise 1, specifically creating the Shop component that throws an error.  It doesn't provide the ErrorBoundary component, the React Router setup, or the other components mentioned in the exercise.
+- The exercise requires the integration of multiple components and libraries to implement the error boundary and routing functionality.  This snippet only focuses on creating an error-prone component.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/data-ex3.json
+suggestions for improvement:
+- The provided code appears to be a JSON file containing data structures, not a React component implementation. Therefore, it does not address any of the exercises.
+- The exercises require creating React components, implementing routing, error boundaries, and data display, none of which are present in the provided JSON data.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/data.json
+suggestions for improvement:
+- The provided JSON data needs to be integrated into React components as described in Exercise 2 and Exercise 3.  Currently, it's just a data structure without any React code to display it.
+Correctness: 0%
+-----
