@@ -1,0 +1,21 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week4/Day1/Mini-project-Anagram-checker.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week4/Day1/anagram_checker.py
+suggestions for improvement:
+- The instructions specify creating two separate files, `anagram_checker.py` and `anagrams.py`. The provided code combines both functionalities into a single file.
+- The program lacks user interface elements as described in the instructions (menu, user input handling, error messages, formatted output).
+- The `get_anagrams` function could be made more efficient by using a more optimized algorithm for finding anagrams.
+- Error handling should be improved; instead of printing error messages within the `AnagramChecker` class, exceptions should be raised and handled in the `anagrams.py` file for better separation of concerns.
+Correctness: 90%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week4/Day1/anagrams.py
+suggestions for improvement:
+- The `anagram_checker.py` file is missing, making it impossible to fully assess the correctness of the `AnagramChecker` class.  The provided code assumes its existence and correct functionality.
+- Error handling could be improved. Instead of just printing 'Error' messages, consider using exceptions for more robust error management. This would allow for more graceful handling of unexpected situations.
+- The performance could be improved by optimizing the `get_anagrams` method in the `AnagramChecker` class.  Currently, the efficiency isn't clear without seeing its implementation.
+- Consider adding a progress indicator for large word lists to enhance user experience.
+Correctness: 90%
+-----
