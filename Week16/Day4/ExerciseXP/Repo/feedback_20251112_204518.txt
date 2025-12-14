@@ -1,0 +1,33 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day4/ExerciseXP/Repo/App.jsx
+suggestions for improvement:
+- The provided code in `App.js` is correct in that it imports and renders the components specified in the exercises. However, the exercises themselves are not included. There is no code for `Car.js`, `Events.js`, `Phone.js`, and `Color.js`. Therefore, the code cannot be fully assessed for correctness without the contents of the specified components.
+- Need to provide code for Car, Events, Phone and Color components.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day4/ExerciseXP/Repo/Car.jsx
+suggestions for improvement:
+- Consider using more descriptive variable names if the context grows more complex.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day4/ExerciseXP/Repo/Color.jsx
+suggestions for improvement:
+- Consider adding a dependency array to useEffect if the effect depends on specific props or state values to prevent unnecessary re-renders.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day4/ExerciseXP/Repo/Events.jsx
+suggestions for improvement:
+- Consider adding comments to explain complex logic or non-obvious behavior.
+- For better performance in larger applications, consider debouncing or throttling the `handleKeyDown` function if the input changes rapidly.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day4/ExerciseXP/Repo/Garage.jsx
+suggestions for improvement:
+- This code only implements part of exercise 1. It creates the Garage component, but doesn't fulfill the other requirements, such as Car component or useState hook.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day4/ExerciseXP/Repo/Phone.jsx
+suggestions for improvement:
+- Consider destructuring the state variables in the function body for improved readability.
+- No security concerns were identified.
+Correctness: 100%
+-----

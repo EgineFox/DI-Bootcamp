@@ -1,0 +1,25 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day5/ExercisesXP/Repo/App.jsx
+suggestions for improvement:
+- Consider separating the simulations into distinct components for better organization and reusability.
+- The code is missing the details about the componentDidUpdate and getSnapshotBeforeUpdate lifecycle methods from Exercise 2. Add logic that uses and console logs in these methods. Also, ensure you are doing Exercise XP 4 from yesterday as part of Exercise 2.
+- Ensure that the Child component in Exercise 3 alerts an unmounted message using componentWillUnmount.
+Correctness: 75%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day5/ExercisesXP/Repo/BuggyCounter.jsx
+suggestions for improvement:
+- The `ErrorBoundary` component is missing. This component is crucial for catching errors and displaying a fallback UI, as described in Exercise 1.
+- The simulations (Simulation 1, Simulation 2, and Simulation 3) described in Exercise 1 are not implemented. The `BuggyCounter` needs to be used within different `ErrorBoundary` configurations in `App.js` to match the described simulations.
+Correctness: 50%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day5/ExercisesXP/Repo/Color.jsx
+suggestions for improvement:
+- Consider using more descriptive variable names for clarity.
+- The alert in `deleteChild` function could be replaced with a console log.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day5/ExercisesXP/Repo/ErrorBoundary.jsx
+suggestions for improvement:
+- Consider adding PropTypes for better type checking and documentation.
+- The styling could be moved to a CSS file or styled-components for better separation of concerns.
+Correctness: 100%
+-----

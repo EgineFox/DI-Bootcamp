@@ -1,0 +1,12 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week2/Day3/Mini-Project-TicTacToe.py
+suggestions for improvement:
+- The board representation is unconventional; a 3x3 list of lists would be more standard and intuitive. The current implementation uses row numbers as the first element of each sublist, which adds complexity and doesn't align well with standard 2D array representation.
+- The `check_win` function correctly checks for wins, but it could be made more concise and readable by iterating through rows, columns, and diagonals directly instead of separate checks for each.
+- Input validation should be more robust. It currently only checks for the format (e.g., '1 A'), but not the range (1-3 for row and A-C for column).
+- The game logic correctly alternates between players, detects wins, and ties, which meets a primary requirement.  However, the board's unusual representation detracts from the overall clarity.
+Brief justification:
+- correctness: The code implements a Tic-Tac-Toe game with a `check_win` function that correctly identifies winning scenarios and a game loop that handles player turns, win/tie conditions, and restarts. However, the board representation deviates from the recommended 2D list approach, and input validation needs improvement.  The core functionality (playing the game, checking for wins/ties) is present, but with some deviations from best practices.
+- readability: The code is generally well-structured and uses meaningful variable names. However, the unusual board representation makes it less intuitive to understand.  Comments would also enhance readability.
+- performance: The code's performance is acceptable for this simple game. The algorithms are efficient, and no major performance bottlenecks are apparent. The use of tabulate likely improves the visual presentation.
+- security: The code doesn't have any apparent security vulnerabilities. It handles user input in a way that prevents common errors without exposing the system to risks.
+

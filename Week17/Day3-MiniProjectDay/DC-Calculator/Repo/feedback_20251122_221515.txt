@@ -1,0 +1,12 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/DC-Calculator/Repo/App.jsx
+suggestions for improvement:
+- The provided code only imports and renders a `Calculator` component. It does not implement the core logic of the calculator as described in the problem statement (taking two numbers as input, performing an operation, and displaying the result).
+- The actual calculator logic and component implementation are missing, making the submission incomplete and failing to address the requirements outlined in the 'What you will create' and 'Instructions' sections.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day3-MiniProjectDay/DC-Calculator/Repo/Calculator.jsx
+suggestions for improvement:
+- Consider adding input validation to prevent non-numeric input or handle edge cases like extremely large numbers.
+- Spelling error: "Substruction" should be "Subtraction".
+Correctness: 100%
+-----
