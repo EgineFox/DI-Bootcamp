@@ -1,0 +1,19 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/Exercises-XP/book-inventory-selector/Repo/BookList.jsx
+suggestions for improvement:
+- Consider using a dropdown select instead of multiple buttons for genre selection, especially if the number of genres grows.
+- The filtering logic can be slightly improved for better readability, perhaps by using a `switch` statement or a lookup table (object) to map filter values to book selections.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/Exercises-XP/book-inventory-selector/Repo/bookSlice.js
+suggestions for improvement:
+- Use `createSelector` from `@reduxjs/toolkit` for creating selectors to memoize the derived data. This will improve performance by preventing unnecessary re-computation of the filtered book lists.
+- In the selectors, directly access the books array using state.books.books instead of just state.books may cause issue if the state structure changes in the future. Consider destructuring the state in the selector function arguments. e.g., state => { books } = state; return books.books
+- The component implementation and UI interaction aspects of the exercise are missing.  While the Redux setup and selectors are present, the React component (`BookList`) and the UI elements (buttons/dropdown) for genre selection haven't been implemented.  This is a significant portion of the exercise.
+Correctness: 60%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/Exercises-XP/book-inventory-selector/Repo/store.js
+suggestions for improvement:
+- The provided code only sets up the Redux store. It needs to include the slice definition with initial state, actions, and reducers, as well as the selectors as requested in the exercise instructions.
+- The `bookReducer` should be fully defined, implementing the required functionality to manage the book inventory state.
+Correctness: 0%
+-----

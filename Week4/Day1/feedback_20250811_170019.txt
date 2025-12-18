@@ -1,0 +1,20 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week4/Day1/Mini-project-Anagram-checker.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week4/Day1/anagram_checker.py
+suggestions for improvement:
+- The `anagrams.py` file, responsible for the user interface, is missing. The instructions explicitly state that a separate file should handle user interaction.
+- Error handling in the `__init__` method could be improved.  Instead of printing error messages, it should raise exceptions which can be handled by the calling code. This would allow the program to handle the errors gracefully or terminate appropriately instead of simply printing to the console.
+- The performance of `get_anagrams` could be significantly improved. Generating all permutations is computationally expensive for longer words. Consider using a more efficient algorithm, perhaps one that involves sorting the letters of the input word and comparing it to sorted versions of words in the dictionary. This would avoid generating unnecessary permutations.
+- Add more robust input validation in `anagrams.py` (once implemented).  Currently, the input validation is entirely absent in the provided code.
+Correctness: 95%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week4/Day1/anagrams.py
+suggestions for improvement:
+- The `AnagramChecker` class implementation is missing from the provided code.  The solution relies on it, but it's not included.  The `sowpods.txt` file should be a zipped file, which needs to be extracted before use.  The code should handle this file extraction. Add error handling for file I/O operations (e.g., `FileNotFoundError`). Improve the efficiency of `get_anagrams` by using a more optimized algorithm (e.g., sorting the letters of the input word and checking for matching sorted letters against the word list). Consider adding a progress indicator for large word lists to enhance user experience.
+- The user interface could be improved with clearer prompts and more informative error messages.  The input validation could be more robust (e.g., handling edge cases, preventing buffer overflow attacks, etc).
+- The program's performance could be improved by using more efficient data structures and algorithms. For instance, using a `set` for the word list would allow for faster lookup times. 
+Correctness: 95%
+-----

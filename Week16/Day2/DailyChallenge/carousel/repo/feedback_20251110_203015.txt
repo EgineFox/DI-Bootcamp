@@ -1,0 +1,26 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/DailyChallenge/carousel/repo/App.js
+suggestions for improvement:
+- Consider adding propTypes for the Carousel component to improve code maintainability and prevent unexpected behavior.
+- Add error handling in case the image URLs are invalid.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/DailyChallenge/carousel/repo/Carousel.js
+suggestions for improvement:
+- Consider using a more descriptive component name than 'DemoCarousel'. A name like 'CityCarousel' would better reflect its purpose.
+- For better reusability, consider making the image URLs and legends props that can be passed into the component.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/DailyChallenge/carousel/repo/carousel.css
+suggestions for improvement:
+- The provided code snippet is only CSS, which is not sufficient to build the React carousel as required by the instructions.
+- The code should include a React component that uses the `react-responsive-carousel` package to display the images in a carousel format.
+- The component should import the necessary dependencies, fetch or declare the image URLs, and render the carousel with the images.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week16/Day2/DailyChallenge/carousel/repo/index.js
+suggestions for improvement:
+- The provided code is a basic React setup, but it doesn't implement the carousel functionality as described in the problem statement. The `App` component's content is unknown, so I'm assuming it does not include the React Responsive Carousel.
+- To address the problem, you need to install the `react-responsive-carousel` package using npm or yarn, import it into your `App` component, and use it to display the images provided in the instructions.
+- The provided images should be used as the images within the carousel component.
+Correctness: 0%
+-----
