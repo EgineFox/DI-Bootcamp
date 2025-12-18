@@ -7,7 +7,7 @@ a = 1;
 console.log(num);
 
 /** type string */
-let name: string = 'John';
+let name1: string = 'John';
 
 /**type boolean */
 let bool: boolean = false;
