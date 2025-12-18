@@ -1,14 +1,14 @@
-type Indicator = "positive" | "negative" | "zero";
+function checkNumber(num: number): string {
+    if (num > 0) {
+        return "positive";
+    } else if (num < 0) {
+        return "negative";
+    } else {
+        return "zero";
+    }
+}
 
-type myFunction = ( num: number) => Indicator;
-
-const examleFunc: myFunction = ( a ) => {
-    if ( a > 0 ) return "positive";
-    if ( a < 0 ) return "negative";
-    if ( a === 0 ) return "zero";
-};
-
-examleFunc(15);
-examleFunc(-15);
-examleFunc(0);
-
+// Example calls:
+console.log(checkNumber(15));   // "positive"
+console.log(checkNumber(-15));  // "negative"
+console.log(checkNumber(0));    // "zero"
