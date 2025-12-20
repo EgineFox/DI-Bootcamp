@@ -1,0 +1,42 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day4-d2-w19/DailyChallenge-Planner/REPO/AddTask.jsx
+suggestions for improvement:
+- Consider adding input validation to prevent excessively long or potentially malicious input strings.
+- For a production environment, implement more robust error handling, particularly around the dispatch operation.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day4-d2-w19/DailyChallenge-Planner/REPO/Calendar.jsx
+suggestions for improvement:
+- The code only implements the Calendar/Date Picker Component and the AddTask Component partially. It is missing the TaskList, EditTask, and DeleteTask components, thus only partially fulfilling the instructions.
+- The component directly dispatches an `addTask` action with a hardcoded task. While technically fulfilling the 'AddTask Component' requirement, it doesn't allow the user to input task details, which is a more complete implementation.
+- Consider adding props validation to ensure the `onDaySelected` prop is a function.
+Correctness: 60%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day4-d2-w19/DailyChallenge-Planner/REPO/DeleteTask.jsx
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day4-d2-w19/DailyChallenge-Planner/REPO/EditTask.jsx
+suggestions for improvement:
+- Consider adding some basic validation to the input fields to prevent empty or excessively long task titles/descriptions.
+- Add better error handling.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day4-d2-w19/DailyChallenge-Planner/REPO/TaskList.jsx
+suggestions for improvement:
+- Consider using more descriptive variable names where appropriate to enhance readability, although the current names are reasonably clear.
+- The component structure is good, but think about how to handle larger task lists efficiently. Consider pagination or virtualization if the list grows significantly.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day4-d2-w19/DailyChallenge-Planner/REPO/store.js
+suggestions for improvement:
+- The provided code only sets up the Redux store. It needs to include the actions, reducers, and React components to fully implement the daily planner application as described in the problem description.
+- Consider adding initial state to the tasksSlice, potentially as an empty object representing no tasks for any days initially.
+Correctness: 50%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day4-d2-w19/DailyChallenge-Planner/REPO/tasksSlice.js
+suggestions for improvement:
+- Consider using a more robust method for generating unique IDs for tasks, especially if the application scales.
+- The selector is well-implemented; no immediate improvements are necessary.
+Correctness: 100%
+-----
