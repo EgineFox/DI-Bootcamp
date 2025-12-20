@@ -1,0 +1,40 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/AddCategoryForm.jsx
+suggestions for improvement:
+- Implement Redux store setup with reducers to manage tasks and categories with initial states.
+- Implement actions and reducers for tasks (add, edit, delete, update progress).
+- Implement selectors using `createSelector` for `selectTasksByCategory`, `selectCompletedTasks`, and `selectCategoryById`.
+- Create TaskList and CategorySelector components using useSelector.
+- Implement useCallback for task editing and completion.
+- Implement UI elements for task editing and completion.
+Correctness: 30%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/CategorySelector.jsx
+suggestions for improvement:
+- The components should be in separate files for better organization.
+- The provided code only implements the `CategorySelector` and `TaskList` components. It doesn't include the Redux store setup, actions, reducers, selectors (`selectCompletedTasks`, `selectCategoryById`), or the initial states for tasks and categories, as requested by the instructions.
+- The instructions explicitly mention the use of `createSelector`, but there is no implementation shown for this.
+- The instructions specify the need to edit and delete categories as well, but the code doesn't address these features.
+Correctness: 50%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/categoriesSlice.js
+suggestions for improvement:
+- Consider creating a separate slice for tasks to better organize the Redux store.
+- Implement actions and reducers for tasks (add, edit, delete, update progress) as requested.
+- Implement the `selectTasksByCategory` and `selectCompletedTasks` selectors as specified in the instructions.  The current code only covers category-related selectors.
+Correctness: 70%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/store.js
+suggestions for improvement:
+- Implement tasksSlice and categoriesSlice with their corresponding reducers and actions.
+- Create selectors using createSelector as described in the instructions.
+- Implement the TaskList and CategorySelector components using useSelector to fetch data from the Redux store.
+- Add useCallback for task editing and completion handlers to prevent unnecessary re-renders.
+- Ensure proper error handling and validation for user inputs.
+Correctness: 20%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/tasksSlice.js
+suggestions for improvement:
+- Consider creating a separate slice for categories to better organize the Redux store.
+- The `selectTaskById` selector should be memoized using `createSelector` for better performance.
+Correctness: 85%
+-----
