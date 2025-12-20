@@ -12,7 +12,7 @@ const AddTaskForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim() && category) {
-      dispatch(addTask({ title, category, isDone: false }));
+      dispatch(addTask({ title, category }));
       setTitle("");
       setCategory("");
     }

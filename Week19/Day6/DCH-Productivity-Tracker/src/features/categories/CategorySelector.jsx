@@ -11,7 +11,7 @@ const CategorySelector = () => {
     <div>
       <h2>Category Selector</h2>
       <ul>
-        {categories.map(category => (
+        {(categories ?? []).map(category => (
           <li key={category.id}>
             <button
               style={{
