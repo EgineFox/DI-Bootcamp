@@ -1,0 +1,54 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/App.jsx
+suggestions for improvement:
+- Consider moving the `fetchDataEx4` function outside of the `App` component for better organization if it doesn't rely on `App`'s state.
+- For larger applications, consider using a state management library (like Redux or Zustand) to manage the application's state and handle asynchronous actions, especially dealing with APIs.
+- Add Loading State to prevent multiple submit clicks.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/ErrorBoundary.jsx
+suggestions for improvement:
+- Consider adding more specific error messages in the render method to improve user experience.
+- The `componentDidCatch` method currently only logs the error. Consider implementing more sophisticated error reporting, like sending the error to an error tracking service.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/Example-1.jsx
+suggestions for improvement:
+- The provided code attempts to fetch data from a JSON file and display the SocialMedias array. However, it neglects the initial exercises focusing on React Router and Error Boundaries. Therefore, it only partially addresses the later exercises related to displaying JSON data while completely ignoring the initial tasks.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/Example-2.jsx
+suggestions for improvement:
+- Ensure that the component reads data.json correctly.
+- Verify the data structure in the json file and modify the parsing in this component if necessary
+- Make sure that the Example2 component reads 'Skills' data specifically.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/Example-3.jsx
+suggestions for improvement:
+- The provided code addresses only Exercise 3 and is a single component. There should be at least the implementation of the Router and ErrorBoundary of Exercise 1 and the component of Exercise 2.
+- The component of Exercise 3 should be imported into the `App.js` file.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/HomeScreen.jsx
+suggestions for improvement:
+- This code snippet is incomplete, only defining a Home component. To address the exercise fully, you need to complete all components (HomeScreen, ProfileScreen, ShopScreen, ErrorBoundary) and implement the React Router setup within App.js as per the instructions.
+- Complete Exercise 1 according to the instructions by implementing React Router Dom, Bootstrap navbar with NavLinks, and defining routes for the functional components (HomeScreen, ProfileScreen, and ShopScreen), wrapping them with the ErrorBoundary component. Implement the ErrorBoundary class component.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/PostList.jsx
+suggestions for improvement:
+- The component should be rendered in the App.js file as requested by the instructions.
+- Create a data.json file and put the relevant data in it (exercise 2).
+Correctness: 50%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/ProfileScreen.jsx
+suggestions for improvement:
+- This code snippet is isolated and doesn't address any of the exercises detailed in the instructions. It defines a `Profile` component, but without context of the React Router setup, ErrorBoundary, JSON fetching, or POST request, it's impossible to determine its correctness within the problem set. It appears to be extracted from Exercise 1, but it is incomplete and doesn't fulfill the full exercise requirements.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/ShopScreen.jsx
+suggestions for improvement:
+- This code snippet only includes the Shop component, which throws an error.  It does not address the React Router, Error Boundary, or JSON aspects of the exercises.  It is therefore incomplete.
+- The code lacks the necessary structure for React Router implementation, error handling within an ErrorBoundary, and JSON data display or posting.
+Correctness: 0%
+-----
