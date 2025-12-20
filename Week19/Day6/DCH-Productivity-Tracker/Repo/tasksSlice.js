@@ -64,7 +64,7 @@ export const selectTasks = createSelector(
 export const selectSelectedCategory = (state) => state.category.selectedCategory;
 
 // tasks by id
-export const selectTaskByCategory = createSelector(
+export const selectTasksByCategory = createSelector(
     [selectTasks, selectSelectedCategory],
     (tasks, selectedCategory) => {
         if (!selectedCategory) return tasks;

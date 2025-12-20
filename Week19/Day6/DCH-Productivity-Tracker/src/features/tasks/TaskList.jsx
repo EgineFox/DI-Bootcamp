@@ -1,64 +1,80 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  selectTasks,
   selectTaskByCategory,
   toggleTask,
   removeTask,
-  updateProgress
+  editTask,
 } from "./tasksSlice";
 
 const TaskList = () => {
+  const tasks = useSelector(selectTaskByCategory);
   const dispatch = useDispatch();
 
-  // получаем задачи, отфильтрованные по выбранной категории
-  const tasks = useSelector(selectTaskByCategory);
+  const [editingId, setEditingId] = useState(null);
+  const [newTitle, setNewTitle] = useState("");
+
+  const handleToggle = useCallback(
+    (id) => {
+      dispatch(toggleTask({ id }));
+    },
+    [dispatch]
+  );
+
+  const handleDelete = useCallback(
+    (id) => {
+      dispatch(removeTask({ id }));
+    },
+    [dispatch]
+  );
+
+  const startEditing = useCallback((task) => {
+    setEditingId(task.id);
+    setNewTitle(task.title);
+  }, []);
+
+  const saveEdit = useCallback(() => {
+    dispatch(editTask({ id: editingId, title: newTitle }));
+    setEditingId(null);
+    setNewTitle("");
+  }, [dispatch, editingId, newTitle]);
 
   return (
     <div>
       <h2>Tasks</h2>
 
-      {tasks.length === 0 && <p>No tasks yet</p>}
+      {tasks.length === 0 && <p>No tasks in this category</p>}
 
       <ul>
         {tasks.map((task) => (
-          <li key={task.id} style={{ marginBottom: "10px" }}>
-            <div>
-              <strong>{task.title}</strong> (category: {task.category})
-            </div>
-
-            <div>
-              <label>
+          <li key={task.id}>
+            {editingId === task.id ? (
+              <>
                 <input
-                  type="checkbox"
-                  checked={task.isDone}
-                  onChange={() => dispatch(toggleTask({ id: task.id }))}
+                  value={newTitle}
+                  onChange={(e) => setNewTitle(e.target.value)}
                 />
-                Done
-              </label>
-            </div>
+                <button onClick={saveEdit}>Save</button>
+              </>
+            ) : (
+              <>
+                <span
+                  style={{
+                    textDecoration: task.isDone ? "line-through" : "none",
+                  }}
+                >
+                  {task.title}
+                </span>
 
-            <div>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value={task.progress}
-                onChange={(e) =>
-                  dispatch(
-                    updateProgress({
-                      id: task.id,
-                      progress: Number(e.target.value),
-                    })
-                  )
-                }
-              />
-              <span>{task.progress}%</span>
-            </div>
+                <button onClick={() => handleToggle(task.id)}>
+                  {task.isDone ? "Undo" : "Done"}
+                </button>
 
-            <button onClick={() => dispatch(removeTask({ id: task.id }))}>
-              Delete
-            </button>
+                <button onClick={() => startEditing(task)}>Edit</button>
+
+                <button onClick={() => handleDelete(task.id)}>Delete</button>
+              </>
+            )}
           </li>
         ))}
       </ul>
