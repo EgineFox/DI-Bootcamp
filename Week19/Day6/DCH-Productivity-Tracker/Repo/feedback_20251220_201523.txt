@@ -1,0 +1,49 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/AddCategoryForm.jsx
+suggestions for improvement:
+- This code only implements the 'addCategory' functionality, but the instructions require the implementation of 'editCategory', 'deleteCategory' actions as well.
+- Consider adding more comprehensive error handling, such as input validation, for enhanced robustness.
+- The provided code only implements the 'AddCategoryForm', while the prompt requests for TaskList and CategorySelector components.
+Correctness: 20%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/AddTaskForm.jsx
+suggestions for improvement:
+- The provided code only implements the 'AddTaskForm' component and doesn't address the core requirements of the chapter, which include setting up a Redux store with reducers for tasks and categories, implementing actions and reducers for managing tasks and categories, creating selectors using `createSelector`, building `TaskList` and `CategorySelector` components, and utilizing `useCallback` for task editing and completion.
+- The code does not include any Redux setup, reducer implementations, selector creation (especially using `createSelector`), or `useCallback` usage.  It's just a basic form for adding tasks.
+Correctness: 0%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/CategorySelector.jsx
+suggestions for improvement:
+- Implement the Redux setup, actions, and reducers for tasks as described in the problem.
+- Implement the Redux setup, actions, and reducers for categories as described in the problem.
+- Implement `selectTasksByCategory`, `selectCompletedTasks`, and `selectCategoryById` selectors using `createSelector`.
+- Implement TaskList component to display tasks based on category selection.
+- Implement task editing and completion functionality with useCallback.
+Correctness: 50%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/TaskList.jsx
+suggestions for improvement:
+- The code does not contain any of the elements described in the chapter, such as creating a Redux store with reducers for tasks and categories, defining initial states, implementing actions to add, edit, delete tasks/categories, creating selectors using `createSelector`, and creating a `CategorySelector` component.
+- The code only creates a TaskList component which consumes Redux slices.
+Correctness: 0%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/categoriesSlice.js
+suggestions for improvement:
+- Consider creating a tasks slice and reducer to manage the task-related state and logic, as the prompt requires managing both tasks and categories.
+- While `selectCategoryById` works, it's a higher-order selector.  It could be improved by directly accessing the categoryList from the state in the outer function.
+Correctness: 75%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/store.js
+suggestions for improvement:
+- Implement the task and category slices including actions, reducers and selectors as requested in the prompt.
+- Create the TaskList and CategorySelector components using useSelector and useCallback hooks as requested.
+- Add logic for editing and completing tasks.
+Correctness: 20%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week19/Day6/DCH-Productivity-Tracker/Repo/tasksSlice.js
+suggestions for improvement:
+- Consider creating a separate slice for categories to better organize the Redux store.
+- The `selectTaskById` selector is not memoized because it accepts an argument. It should be refactored to maintain memoization.
+- Rename `selectTaskByCategory` to `selectTasksByCategory` to match the instructions and be more descriptive.
+- Consider handling the case where a task is not found in `toggleTask` and `updateProgress` reducers. Throwing an error or returning a default state can prevent unexpected behavior.
+Correctness: 80%
+-----
