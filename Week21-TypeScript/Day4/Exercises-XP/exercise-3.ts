@@ -1,17 +1,25 @@
-class Calculator {
-    static add(a: number, b: number): number {
-        return a + b;
-    }
-    static subtract(a: number, b: number): number {
-        return a - b;
+class Animal {
+    constructor(
+        public name: string,
+    ) {}
+
+    makeSound(): string {
+        return "Some generic animal sound";
+    };
+}
+
+class Dog extends Animal {
+    makeSound(): string {
+        return "bark";
     }
 }
 
-console.log(Calculator.add(10, 5));       // 15
-console.log(Calculator.subtract(10, 5));  // 5
+const myDog = new Dog('Flaffy');
 
-const sum = Calculator.add(100, 50);
-console.log(sum);  // 150
+console.log(myDog.name);
+console.log(myDog.makeSound());
 
-const difference = Calculator.subtract(100, 50);
-console.log(difference);  // 50
+const genericAnimal = new Animal("NLO");
+console.log(genericAnimal.makeSound);
+
+
