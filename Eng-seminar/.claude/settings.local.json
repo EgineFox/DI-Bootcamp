@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest wordle-game --typescript --tailwind --eslint --app --no-git --import-alias \"@/*\" --yes)",
+      "Bash(mkdir:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: DevWordle - Programming term guessing game\n\nAdd complete DevWordle implementation with:\n- 65+ programming terms word list\n- Terminal/IDE themed UI with dark mode\n- Tile flip, shake, pop, and bounce animations\n- Stats tracking with localStorage\n- Share functionality with emoji grids\n- Responsive on-screen and physical keyboard support\n- Stats modal with guess distribution\n- Next.js 16 + TypeScript + Tailwind CSS 4\n\nBuilt with React + TypeScript + Next.js\nEOF\n\\)\")",
+      "Bash(git branch:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(npx vercel --prod)",
+      "Bash(npx vercel --prod --yes)"
+    ]
+  }
+}
