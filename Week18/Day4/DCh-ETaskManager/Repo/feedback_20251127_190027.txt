@@ -1,0 +1,43 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/DCh-ETaskManager/Repo/AddTaskForm.jsx
+suggestions for improvement:
+- This code only implements the 'Add Task' functionality, it doesn't include the 'Edit Task' or 'Filter Task' features required by the chapter content.
+- The code is incomplete with respect to the requirements in the instructions and therefore needs to implement the missing functionality to properly meet requirements.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/DCh-ETaskManager/Repo/App.css
+suggestions for improvement:
+- The code provided is just CSS styles and doesn't implement any of the required React functionality (useContext, useReducer, useRef) for task editing or filtering.
+- There is no React component structure, state management, or event handling related to the Task Manager application.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/DCh-ETaskManager/Repo/App.jsx
+suggestions for improvement:
+- The provided code sets up the basic structure of the Task Manager application by including the necessary components and context provider.
+- However, it does not implement the core functionalities described in the prompt, such as editing tasks, filtering tasks, and using useRef for editing.  These features are only structurally prepared by including the components (AddTaskForm, TaskFilter, TaskList), which are not provided and we therefore cannot assess.  Without implementing the editing and filtering functionality, the code does not meet the objectives of the exercise.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/DCh-ETaskManager/Repo/TaskFilter.jsx
+suggestions for improvement:
+- Consider implementing the actual filtering logic within the reducer, rather than just setting a filter state. This would align better with the `useReducer` pattern and improve performance by avoiding unnecessary re-renders.
+- While the component handles filtering status, the actual edit functionality is missing. Completing this would bring the implementation closer to meeting all requirements.
+- The code is missing the edit functionality using useRef, which is a key requirement.
+Correctness: 70%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/DCh-ETaskManager/Repo/TaskItem.jsx
+suggestions for improvement:
+- Consider adding filter functionality based on task completion status as described in the prompt. The current code only implements the 'Edit Tasks' feature.
+- Ensure that ACTIONS.EDIT_TASK is properly implemented in the reducer, to handle the state update after editing a task. (Not visible in the provided code, assuming it exists.)
+Correctness: 90%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/DCh-ETaskManager/Repo/TaskList.jsx
+suggestions for improvement:
+- The code only implements the task filtering feature, and does not implement the editing feature.
+- The TaskItem component, which contains the core logic for editing, is missing.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/DCh-ETaskManager/Repo/TaskProvider.jsx
+suggestions for improvement:
+- Consider using more descriptive names for the filter constants (e.g., `SHOW_ALL` instead of `ALL`).
+- The reducer logic is well-structured; ensure that any future additions to the state are handled immutably.
+Correctness: 100%
+-----

@@ -1,0 +1,48 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/DatePicker.jsx
+suggestions for improvement:
+- The code implements only the date picker part. It's missing the Redux store setup, action definitions, reducer implementation, task display component, and task management components as requested in the prompt.
+- The code lacks error handling or input validation for the date picker.
+- The code does not handle the task related actions as requested in the prompt.
+Correctness: 50%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/TaskForm.jsx
+suggestions for improvement:
+- The code only implements the 'add task' functionality. Consider implementing 'edit' and 'delete' task functionalities as described in the instructions.
+- Implement a proper date picker component as described in the instructions rather than relying on a simple input field.
+- Add validation for the title input to prevent adding tasks with excessively long titles or potentially harmful characters.
+Correctness: 60%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/TaskList.jsx
+suggestions for improvement:
+- Add prop types to the TaskList component for better type checking.
+- Consider using a more robust state management solution for the editing state if the component becomes more complex.
+- Implement input validation in the `saveEdit` function to prevent empty or malicious input.
+Correctness: 85%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/actionTypes.js
+suggestions for improvement:
+- The provided code only defines action types, which is a small part of the overall requirements. It needs to include reducers, action creators, React components, and Redux store configuration to be considered a more complete solution.
+- Consider adding the implementation of the reducers to handle the actions for adding, editing, and deleting tasks.
+- Implement the React components for the calendar, task display, and task management, and connect them to the Redux store.
+Correctness: 20%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/actions.js
+suggestions for improvement:
+- Consider using a more robust date format (e.g., Date object) instead of just a string, although the instructions do not explicitly require this.
+- Add input validation within the action creators to prevent unexpected errors. For example, ensure `taskId` is a valid number, and that `task` isn't empty.
+- While the provided action creators cover the required functionality, the omission of corresponding reducers limits the degree to which the code can be assessed for fulfilling the full task requirements. Providing the Reducer portion will allow for more accurate assesment
+Correctness: 70%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/reducers.js
+suggestions for improvement:
+- Consider using a library like Immer to simplify immutable state updates, especially within reducers.
+- Add input validation to action payloads within the reducer to prevent errors caused by unexpected data formats or missing properties.
+Correctness: 90%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/store.js
+suggestions for improvement:
+- The code only initializes the Redux store. It needs to include action definitions, reducer implementations, React components for calendar/date picker, task display, and task management, as well as integration of components with the Redux store to fully meet the requirements.
+- Consider creating separate files for actions and reducers to improve code organization.
+- Implement the reducers to handle adding, editing, and deleting tasks.
+Correctness: 30%
+-----

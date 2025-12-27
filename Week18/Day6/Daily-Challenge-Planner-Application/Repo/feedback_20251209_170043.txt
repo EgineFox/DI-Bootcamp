@@ -1,0 +1,58 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/App.jsx
+suggestions for improvement:
+- The code provides a basic structure for the application with placeholders for date picker, task form, and task list components, but it does not include any Redux logic for state management, action creation, or reducer implementation, as described in the instructions.
+- The code does not define any actions or reducers. You need to create these to manage the task data.
+- The components (DatePicker, TaskForm, TaskList) are included, but their implementation, especially concerning interaction with Redux, is missing.
+- The code is missing the Redux store configuration.
+Correctness: 0%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/DatePicker.jsx
+suggestions for improvement:
+- The component only implements the date picker part. You need to add task display, task management (add, edit, delete) components and integrate them with Redux.
+- Implement action definitions and reducers as described in the instructions.
+- Add components for task display, creation, editing, and deletion.
+Correctness: 20%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/TaskForm.jsx
+suggestions for improvement:
+- The code addresses adding a task, but it doesn't cover editing, deleting, displaying tasks, or date selection as comprehensively described in the chapter content.
+- Consider implementing selectors for better data retrieval from the store, especially when dealing with tasks for a specific day.
+- Implement more robust error handling, like validating task inputs (e.g., checking for overly long titles) before dispatching the action.
+Correctness: 50%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/TaskList.jsx
+suggestions for improvement:
+- Consider using a more robust form library for managing the editing state, especially if you plan to add more complex validation or form elements.
+- The component could be further broken down into smaller, more reusable components, such as a TaskItem component.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/actionTypes.js
+suggestions for improvement:
+- The code only defines action types. It should also include action creators and reducers to fully address the problem.
+- Consider grouping related action types into a single file for better organization and maintainability.
+- Add comments to the action types to explain their purpose for better readability.
+Correctness: 50%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/actions.js
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/reducers.js
+suggestions for improvement:
+- Consider using a library like Immer to simplify immutable updates, especially when dealing with nested objects.
+- Add comments to explain the purpose of each action type constant for better maintainability.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/selectors.js
+suggestions for improvement:
+- The provided code only contains selector functions, but the chapter content requires a complete Redux-based daily planner application, including store configuration, actions, reducers, React components for calendar/date picker, task display, and task management, and integration of these components with the Redux store.
+- The submission is incomplete and does not address most of the requirements outlined in the chapter content.
+Correctness: 0%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day6/Daily-Challenge-Planner-Application/Repo/store.js
+suggestions for improvement:
+- The code initializes a Redux store, which is a necessary first step, but it doesn't include the reducers or actions for managing tasks as outlined in the instructions.  Missing implementation for adding, editing and deleting task actions and corresponding reducers.
+- The store initialization could be improved by configuring middleware, such as Redux Thunk or Redux Saga, for handling asynchronous actions if needed. Also consider using Redux Toolkit which will simplify store setup
+Correctness: 20%
+-----

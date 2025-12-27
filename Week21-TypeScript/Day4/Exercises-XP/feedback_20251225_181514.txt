@@ -1,0 +1,26 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week21-TypeScript/Day4/Exercises-XP/exercise-1.ts
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week21-TypeScript/Day4/Exercises-XP/exercise-2.ts
+suggestions for improvement:
+- The example of usage could include an attempt to modify the readonly `id` to explicitly demonstrate the error as requested.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week21-TypeScript/Day4/Exercises-XP/exercise-3.ts
+suggestions for improvement:
+- In the line `console.log(genericAnimal.makeSound);`, you are logging the function itself rather than calling the function. Change it to `console.log(genericAnimal.makeSound());` to execute the function and log its return value.
+- Consider adding types explicitly in more places for better readability and maintainability.
+Correctness: 75%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week21-TypeScript/Day4/Exercises-XP/exercise-4.ts
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week21-TypeScript/Day4/Exercises-XP/exercise-5.ts
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
