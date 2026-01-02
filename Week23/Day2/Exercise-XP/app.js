@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const authRoutes = require('./routers/auth');
+const authRoutes = require('./routes/auth');
 
 const app = express();
 const PORT = 5000;
