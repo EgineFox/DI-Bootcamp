@@ -1,0 +1,61 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/App.jsx
+suggestions for improvement:
+- Consider using a more descriptive name for the 'fetchDataEx4' function to enhance readability.
+- Ensure proper error handling and user feedback for the POST request in Exercise 4 to improve user experience.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/ErrorBoundary.jsx
+suggestions for improvement:
+- Consider adding more specific error handling or logging within the `componentDidCatch` method for better debugging.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/Example-1.jsx
+suggestions for improvement:
+- The component attempts to fetch a local JSON file, which is unnecessary given the exercise description. The JSON data should be directly available as a prop.
+- The component attempts to read the file from the relative path '../data.json', the file must be present in the public directory.
+- The component does not handle cases where the social media entries are not URLs.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/Example-2.jsx
+suggestions for improvement:
+- The file path in the fetch request should be relative to the `public` directory of the React app or use an absolute path if the JSON file is served elsewhere.
+- Consider adding a loading state to handle the time it takes to fetch the data. This will improve the user experience.
+- Error handling could be improved. For example, displaying a user-friendly message instead of just logging the error to the console.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/Example-3.jsx
+suggestions for improvement:
+- The provided code appears to be related to Exercise 3, but it's a single component and there's no context about the other components or the overall structure of the application.
+- The component fetches data, but without seeing the `App.js` file or the other components, it's impossible to determine if it's being rendered correctly within the application.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/HomeScreen.jsx
+suggestions for improvement:
+- This code only defines a Home component, but the exercise requires creating an ErrorBoundary component, setting up React Router with navigation links, creating ProfileScreen and ShopScreen components, and handling errors in the ShopScreen with the ErrorBoundary.
+- The provided component is incomplete and does not fulfill any of the specific requirements outlined in Exercise 1.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/PostList.jsx
+suggestions for improvement:
+- The component should be rendered in App.js as requested by the exercise.
+- The json file should be named posts.json according to the instructions.
+- No CSS styling is asked in the exercise.
+Correctness: 50%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/ProfileScreen.jsx
+suggestions for improvement:
+- This code only defines the Profile component but doesn't address the ErrorBoundary, React Router setup, HomeScreen, ShopScreen, or JSON data display and posting, and therefore doesn't fulfill the requirements of the provided exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/ShopScreen.jsx
+suggestions for improvement:
+- The provided code snippet only contains the `Shop` component and is missing essential parts of Exercise 1, such as the `ErrorBoundary` component, `App.js` setup with React Router, and other components (`HomeScreen`, `ProfileScreen`).
+- The snippet should include the implementation of the `ErrorBoundary` class component with the `componentDidCatch` method, the React Router setup in `App.js` with `BrowserRouter`, `Routes`, `Route`, and `NavLink`, the creation of `HomeScreen` and `ProfileScreen` components, and the wrapping of components with `ErrorBoundary`.
+Correctness: 0%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week17/Day2/exercises_xp/Repo/main.jsx
+suggestions for improvement:
+- The provided code snippet is the entry point (index.js) for the React application, setting up the root and rendering the App component within a BrowserRouter. While technically correct for setting up React Router, it does not address any of the specific tasks outlined in the chapter content (ErrorBoundary, JSON display/parsing, or POST requests). Therefore, it does not fulfill the requirements of the exercises.
+- To address the chapter content, you would need to implement the ErrorBoundary component, set up routes using React Router in App.js, display JSON data from a file (Exercise 2 & 3), and implement a POST request (Exercise 4).
+Correctness: 0%
+-----

@@ -1,0 +1,20 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week3/Day4/ExercisesXP.py
+suggestions for improvement:
+- In `Currency.__add__`, handle the case where `other` is not an instance of `int`, `float`, or `Currency` more gracefully.  A more informative error message would improve the user experience.
+- In `Currency.__iadd__`, the error message can be improved for better clarity. Consider using f-strings to insert the types directly. 
+- Exercise 2 is missing.  Add the code for `func.py` and `exercise_one.py` to demonstrate module import and usage.
+- Exercise 4 lacks comments describing the purpose of each step, which would enhance readability and understanding.
+- Exercise 5 is missing the year + 1 if today is already after January 1st.  It should handle cases where the current date is past January 1st and calculate the time until the next January 1st correctly.
+- Add more comprehensive docstrings to the functions in exercises 4, 5, and 6. The docstrings should clearly specify the function's purpose, arguments, return values, and any exceptions raised.
+Correctness: 90%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week3/Day4/exercise_one.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week3/Day4/func.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----

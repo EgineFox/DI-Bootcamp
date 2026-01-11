@@ -1,0 +1,11 @@
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/Exercises-XP/Repo/Exercise1/ThemeSwitcher.jsx
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week18/Day4/Exercises-XP/Repo/Exercise2/CharacterCounter.jsx
+suggestions for improvement:
+- Consider adding a maximum character limit and displaying a warning message when the user exceeds the limit.
+- The component could be made more reusable by accepting initial text or a character limit as props.
+Correctness: 100%
+-----
