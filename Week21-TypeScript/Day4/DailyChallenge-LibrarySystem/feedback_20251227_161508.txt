@@ -1,0 +1,6 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week21-TypeScript/Day4/DailyChallenge-LibrarySystem/Library.ts
+suggestions for improvement:
+- Consider using template literals for better string formatting in getBookDetails.
+- The findedBook variable name could be improved for better clarity.
+Correctness: 100%
+-----

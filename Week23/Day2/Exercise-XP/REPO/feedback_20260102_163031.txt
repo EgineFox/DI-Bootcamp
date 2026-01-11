@@ -1,0 +1,49 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week23/Day2/Exercise-XP/REPO/app.js
+suggestions for improvement:
+- Consider adding more detailed error handling and logging for debugging purposes.
+- Ensure proper environment variable management for sensitive information like JWT secrets in a production environment.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week23/Day2/Exercise-XP/REPO/auth.js
+suggestions for improvement:
+- Consider using environment variables for JWT secrets instead of hardcoding them.
+- Implement more robust error handling and logging, especially in the refresh token endpoint.
+- Centralize cookie configuration (e.g., `httpOnly`, `secure`, `sameSite`) for better maintainability.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week23/Day2/Exercise-XP/REPO/authMiddleware.js
+suggestions for improvement:
+- Consider using environment variables for JWT_SECRET instead of hardcoding it.
+- Add more detailed error logging, including specific error types.
+- While not explicitly mentioned, consider implementing a more robust mechanism for invalidating tokens.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week23/Day2/Exercise-XP/REPO/authValidation.js
+suggestions for improvement:
+- The code only implements validation schemas using Joi, but does not include other functionalities such as password hashing, JWT generation, middleware for authentication, cookie handling, token refresh, or logout functionality as described in the chapter content.
+- Consider including the validation functions directly within the schema definitions for improved encapsulation.
+- While Joi is good, consider using a dedicated validator library for better separation of concerns.
+Correctness: 60%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week23/Day2/Exercise-XP/REPO/revokedTokens.js
+suggestions for improvement:
+- Consider using a more persistent storage mechanism for revoked tokens than an in-memory Set, especially in a production environment.
+- Implement a mechanism to automatically remove expired revoked tokens to prevent the revokedTokens Set from growing indefinitely. This is crucial for long-running applications.
+- Add better error handling and logging for token revocation and checking, especially around persistence.
+- While not explicitly requested, consider using a database or cache (Redis) to store revoked tokens for better scalability and persistence.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week23/Day2/Exercise-XP/REPO/tokenCleanup.js
+suggestions for improvement:
+- The code implements token expiration checking and cleanup, which is tangentially related to the chapter's content on JWTs, specifically the section on token revocation. However, the chapter emphasizes core JWT authentication steps (generation, verification, route protection, cookies, refresh tokens) more heavily. The provided code focuses on a supplementary security aspect (token cleanup) rather than directly addressing the core functionalities outlined.
+- Avoid hardcoding JWT_SECRET directly in the file. Use environment variables.
+- Consider using a more efficient data structure for `revokedTokensSet` lookups, like a Set in JavaScript, for O(1) average time complexity.
+Correctness: 20%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week23/Day2/Exercise-XP/REPO/users.js
+suggestions for improvement:
+- The code provides user data management functions (add, find, update) which is related to section 4 (Creating User Authentication Endpoints), but it's not a direct implementation of authentication itself. The problem statement mentions that a data table should be created, this could be what it refers to.
+- The code uses an in-memory array to store users which is not suitable for production environments. Section 5, mentions generating JWT tokens in /register and /login which has not been implemented
+- Password hashing, a crucial security aspect mentioned in section 4, is missing. Salting and hashing passwords before storing them is an important practice.
+Correctness: 30%
+-----
