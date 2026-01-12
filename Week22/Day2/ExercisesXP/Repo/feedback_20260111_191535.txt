@@ -1,0 +1,29 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week22/Day2/ExercisesXP/Repo/App.tsx
+suggestions for improvement:
+- Consider extracting the UserCard components into a separate file or component if you intend to have multiple instances to improve maintainability.
+- The UserCard component could benefit from better handling of the role property when it's not provided. Currently, it might render 'undefined' if the role is not passed as a prop. Consider using a default value or a conditional rendering based on the presence of a role prop.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week22/Day2/ExercisesXP/Repo/Counter.tsx
+suggestions for improvement:
+- Consider using separate state variables for `value`, `lastAction`, and `actionCount` for improved readability and potentially better React performance (though this is a micro-optimization in this case).
+- The inline styles are fine for a simple example, but for larger components, consider using CSS classes or a styling library.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week22/Day2/ExercisesXP/Repo/Greeting.tsx
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week22/Day2/ExercisesXP/Repo/UserCard.tsx
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week22/Day2/ExercisesXP/Repo/UserList.tsx
+suggestions for improvement:
+- Consider extracting the user card into its own component for improved readability and reusability.
+- The inline styles could be moved to a CSS file or styled-components for better maintainability.
+- Consider adding memoization to the component to prevent unnecessary re-renders if the props haven't changed.
+Correctness: 100%
+-----

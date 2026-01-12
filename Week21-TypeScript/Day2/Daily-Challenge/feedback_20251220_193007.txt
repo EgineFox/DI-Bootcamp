@@ -1,0 +1,5 @@
+URL: https://github.com/EgineFox/DI-Bootcamp/blob/main/Week21-TypeScript/Day2/Daily-Challenge/DCH.ts
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
