@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import cors from "cors"
 import cookieParser from "cookie-parser"
 import pool from "./db/pool.ts"
+import authRoutes from "./routes/authRoutes.js"
 
 // Load environment variables from .env file
 dotenv.config()
@@ -23,6 +24,9 @@ app.use(cors({
   origin: process.env.FRONTEND_URL || "http://localhost:5173",
   credentials: true,
 }))
+
+// Routes
+app.use("/api/auth", authRoutes)  
 
 // Test route - verify API is running
 app.get("/", (req: any, res: any) => {

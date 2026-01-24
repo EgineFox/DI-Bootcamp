@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { comparePassword, createUser, findUserByEmail, hashPassword  } from "../helpers/passwordHelper.js";
+import { comparePassword, hashPassword  } from "../helpers/passwordHelper.js";
+import { createUser, findUserByEmail } from "../models/userModel.js";
 import { generateAccessToken, generateRefreshToken, verifyRefreshToken } from "../helpers/jwtHelper.js";
-import { access } from "node:fs";
 
 // Register a new user
 export const register = async (req: Request, res: Response): Promise<void> => {

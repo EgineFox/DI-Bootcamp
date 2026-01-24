@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { verifyAccessToken } from "../helpers/jwtHelper.js";
 
 // Extend Express Request type to include user
-declare global {
+declare global { 
     namespace Express {
         interface Request {
             user?: {
