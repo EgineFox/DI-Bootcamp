@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e8e8e8;
+    font-family: Arial, sans-serif;
+    padding: 40px 16px;
+}
+
+#todoSection {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #3a7bd5;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#newTodo {
+    display: flex;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.12);
+    margin-bottom: 20px;
+}
+
+#newTodo input {
+    flex: 1;
+    padding: 14px 16px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #555;
+}
+
+#newTodo button {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 14px 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+#newTodo button:first-of-type {
+    background-color: #4caf50;
+}
+
+#newTodo button:last-of-type {
+    background-color: #e53935;
+}
+
+#btnGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+#filterButtons {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+#fButtons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#fButtons button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #d0d0d0;
+    color: #333;
+
+}
+
+#tasks {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 6px;
+    padding: 14px 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.1);
+}
+
+.task label {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    margin-left: 12px;
+}
+
+.task button {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.task.completed label {
+    text-decoration: line-through;
+    color: #888;
+}
+.task.completed input[type="checkbox"] {
+    accent-color: #0fc52b;
+}
+
+#newTodo button:first-of-type:hover {
+    background-color: #43a047;
+}
+
+#newTodo button:last-of-type:hover {
+    background-color: #c62828;
+}
+
+#fButtons button:hover {
+    background-color: #bbb;
+}
+
+#fButtons button.active {
+    background-color: #2196f3;
+    color: #fff;
+
+}
+
+.task button:hover {
+    background-color: #c62828;
+}
