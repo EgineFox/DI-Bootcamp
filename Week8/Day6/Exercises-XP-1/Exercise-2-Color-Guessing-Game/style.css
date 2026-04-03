@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonsLevel {
+    display: flex;
+    flex-direction: row;
+       
+}
+
+.buttonsLevel button {
+    margin: 5px;
+    width: 70px;
+    height: 40px;
+    place-content: center;
+}
+#container_game {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#colorBox {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+#pickColorInput {
+    display: none;
+}

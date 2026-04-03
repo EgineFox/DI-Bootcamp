@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Game</title>
+</head>
+<body>
+
+    <h1>Color Guessing Game</h1>
+    <div id="container_game">
+        <div id="countdownBox"></div>
+
+        <div class="buttonsLevel">
+            <button id="easyLevel" class="level">Easy</button>
+            <button id="MediumLevel" class="level">Medium</button>
+            <button id="HardLevel" class="level">Hard</button>
+        </div>
+        <div id="colorBox"></div>
+    </div>
+    <div id="guessBox">
+        <h2>Pick a color:</h2>
+        <div class="pickButtons">
+            <button id="pickColor1"></button>
+            <button id="pickColor2"></button>
+            <button id="pickColor3"></button>
+            <button id="pickColor4"></button>
+            <button id="pickColor5"></button>
+            <button id="pickColor6"></button>
+        </div>
+        <input type="text" id="pickColorInput" placeholder="rgb(0,0,0)">
+    </div>
+    <div id="feedbackBox"></div>
+    <div id="scoreBox"></div>
+    <script src="script.js"></script>
+</body>
+</html>
